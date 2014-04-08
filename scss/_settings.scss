@@ -33,15 +33,15 @@
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
-// $total-columns: 12;
+$row-width: rem-calc(2000);
+$total-columns: 18;
 
 // Global
 
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: 'Geometric415BT-MediumA',"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -70,7 +70,7 @@
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
-// $column-gutter: rem-calc(30);
+$column-gutter: rem-calc(0);
 
 // Media Query Ranges
 // $small-range: (0em, 40em);
@@ -282,7 +282,6 @@
 // $block-grid-elements: 12;
 // $block-grid-default-spacing: rem-calc(20);
 // $align-block-grid-to-grid: false;
-
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
@@ -849,7 +848,6 @@
 // $price-money-size: rem-calc(32);
 // $price-money-font-family: $body-font-family;
 
-
 // We use these to control the description styles
 // $price-bg: #fff;
 // $price-desc-color: #777;
@@ -953,8 +951,6 @@
 // $side-nav-font-family: $body-font-family;
 // $side-nav-active-font-family: $side-nav-font-family;
 
-
-
 // We use these to control border styles
 // $side-nav-divider-size: 1px;
 // $side-nav-divider-style: solid;
@@ -1015,7 +1011,6 @@
 // $sub-nav-padding: rem-calc(3 16);
 // $sub-nav-border-radius: 3px;
 // $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
-
 
 // We use these to control the active item styles
 // $sub-nav-active-font-weight: normal;

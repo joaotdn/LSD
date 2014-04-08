@@ -1,0 +1,229 @@
+/**
+ * Timeline settings
+ */
+.h-timeline {
+	@extend %abs;
+	//height: 100%;
+	//background: #ccc;
+	left: rem-calc(300);
+}
+
+//Timeline artcles
+.post-articles {
+	height: 100%;
+	width: rem-calc(2000);
+	float: left;
+	article {
+		height: 100%;
+
+		&.violet {
+			background: $violet;
+		}
+		&.red {
+			background: $pink;
+		}
+		&.yellow {
+			background: $yellow;
+		}
+		&.blue {
+			background: $blue;
+		}
+	}
+}
+
+.list-articles {
+	height: 35%;
+}
+
+.block-violet {
+	height: 50%;
+	background: $violet;
+	width: 100%;
+	right: -100%;
+}
+
+.this-post {
+	background: #333;
+	margin-top: rem-calc(40);
+}
+
+%titles-fonts {
+	font-size: rem-calc(14);
+}
+
+.cat-post {
+	//@extend %titles-fonts;
+	background: white;
+	margin: 0;
+	padding-left: rem-calc(10);
+
+	a {
+		@extend %transition-color;
+		color: $black;
+		&:hover {
+			color: tint($black, 30%);
+		}
+	}
+}
+
+.title-post {
+	@extend %titles-fonts;
+	margin: 0;
+	padding: rem-calc(10);
+	margin-top: rem-calc(25);
+	a {
+		@extend %transition-color;
+		&:hover {
+			color: $yellow;
+		}
+	}
+}
+
+.abstract-post {
+	font-size: rem-calc(12);
+	margin-top: rem-calc(10);
+	line-height: 1.4;
+
+	a {
+		color: $black;
+	}
+}
+
+/**
+ * Projects list
+ */
+.list-projects {
+	height: 45%;
+	width: 100% !important;
+
+	article {
+		height: 100%;
+		@extend %rel;
+	}
+}
+
+%clone-block {
+	top: 0;
+	left: 100%;
+}
+
+.block-blue-lite {
+	@extend %clone-block;
+	background: $blue-lite;
+	height: 40%;
+}
+
+.block-red {
+	@extend %clone-block;
+	background: $pink;
+	height: 60%;
+}
+
+.project-thumb {
+	height: 100%;
+	@extend %rel;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.this-pj {
+	margin-top: 40%;
+
+	header {
+		background: white;
+		width: auto;
+		padding: rem-calc(5);
+	}
+
+	h6,h3 {
+		margin: 0;
+	}
+
+	h6 {
+		a {
+			color: $black;
+			@extend %transition-color;
+			&:hover {
+				color: tint($black, 30%);
+			}	
+		}
+	}
+
+	h3 {
+		line-height: 1;
+		a {
+			&.violet {
+				color: $violet;
+			}
+			&.red {
+				color: $pink;
+			}
+			&.blue {
+				color: $blue;
+			}
+		}		
+	}
+}
+
+.pj-abstract {
+	background: $black;
+	padding: rem-calc(10);
+	a {
+		@extend %transition-color;
+		font-size: rem-calc(14);
+
+		&:hover {
+			color: $yellow;
+		}
+	}	
+}
+
+/**
+ * Thought list
+ */
+.list-thought {
+	height: 20%;
+	width: 100% !important;
+}
+
+.this-thought {
+	background: $blue;
+	height: 100%;
+
+	&.red {
+		background: $pink;
+	}
+	&.yellow {
+		background: $yellow;
+	}
+	&.violet-lite {
+		background: $violet-lite;
+	}
+
+	h6 {
+		margin: 0;
+	}
+	span {
+		font-size: rem-calc(12);
+	}
+
+	header {
+		margin-top: 5%;
+	}
+}
+
+.thought-abstract {
+	font-size: rem-calc(14);
+	background: $black;
+	margin-top: rem-calc(10);
+	padding: rem-calc(10);
+	a {
+		@extend %transition-color;
+		font-size: rem-calc(14);
+
+		&:hover {
+			color: $yellow;
+		}
+	}
+}

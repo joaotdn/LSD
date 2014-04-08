@@ -1,0 +1,116 @@
+/**
+ * Bases
+ */
+body { 
+	overflow-y: hidden; 
+	overflow-x: hidden; 
+	background: url(images/body-pattern.png);
+}
+figure {
+	margin: 0;
+}
+/**
+ * Utility classes
+ */
+.abs {
+	@extend %abs;
+}
+
+.rel {
+	position: relative;
+}
+
+.fix {
+	position: fixed;
+}
+
+.ov-hidden {
+	overflow: hidden;
+}
+.centered {
+	margin: 0 auto;
+}
+
+.text-upp {
+	text-transform: uppercase;
+}
+.white {
+	@extend %white;
+}
+.full-width {
+	width: 100%;
+}
+
+//fonts
+.font-lite {
+	font-family: 'Geometric415BT-LiteA' !important;
+}
+
+.font-medium {
+	font-family: 'Geometric415BT-MediumA' !important;
+}
+.font-bold {
+	font-family: 'Geometric415BT-BlackA' !important;
+}
+.font-regular {
+	font-family: 'Share-Regular' !important;
+}	
+
+/**
+ * Main menu
+ */
+#main-menu {
+	width: rem-calc(300);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: $blue;
+	z-index: 99;
+}
+
+.logo {
+	background: white;
+	padding: rem-calc(40) 0;
+}
+
+.nav-menu {
+	padding-left: rem-calc(64);
+	margin-top: rem-calc(50);
+
+	a {
+		@extend %font-bold;
+		@extend %text-upp;
+		@extend %transition-color;
+		color: white;
+
+		&:hover {
+			color: $yellow;
+		}
+	}
+
+	.sub-menu {
+		a {
+			@extend %font-lite;
+		}
+	}
+}
+
+.sub-menu {
+	margin-left: 0 !important;
+	margin-bottom: rem-calc(20) !important;
+}
+
+/**
+ * Footer
+ */
+#footer {
+	padding: rem-calc(20);
+	background: #333;
+	bottom: 0;
+	left:0;
+}
+
+
+
+

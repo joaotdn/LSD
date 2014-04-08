@@ -1,0 +1,20 @@
+{
+  "name": "lsd",
+  "version": "1.0.0",
+  "title": "LSD - Laboratório de Sistemas Distribuídos",
+  "homepage": "http://novolsd.lsd.ufcg.edu.br",
+  "description": "LSD - UFG",
+  "author": "http://about.me/jteodoro",
+  "tags": "sistemas, distribuidos, ufcg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaotdn/LSD.git"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-spritesmith": "^1.24.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

@@ -1,0 +1,29 @@
+%abs {
+	position: absolute;
+}
+%rel {
+	position: relative;
+}
+
+%font-lite {
+	font-family: 'Geometric415BT-LiteA' !important;
+}
+
+%font-medium {
+	font-family: 'Geometric415BT-MediumA' !important;
+}
+%font-bold {
+	font-family: 'Geometric415BT-BlackA' !important;
+}
+%font-regular {
+	font-family: 'Share-Regular' !important;
+}
+%text-upp {
+	text-transform: uppercase;
+}
+%transition-color {
+	@include single-transition(color,.3s,linear);
+}
+%white {
+	color: white;
+}
