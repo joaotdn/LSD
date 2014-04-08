@@ -89,7 +89,7 @@ function thoughtColors() {
 	$.each($('.this-thought'),function(i) {
 		switch(i % 4) {
 			case 0: 
-				$(this).addClass('blue');
+				$(this).addClass('blue small-offset-1');
 			break;
 
 			case 1: 
@@ -97,7 +97,8 @@ function thoughtColors() {
 			break;
 
 			case 2: 
-				$(this).removeClass('large-3').addClass('large-5 violet-lite large-offset-3').append('<div class="violet-block small-1"></div>')
+				$(this).removeClass('large-3').addClass('large-5 violet-lite large-offset-3')
+				.append('<div class="violet-block small-3 abs"></div><figure class="thought-thumb abs small-5"><>')
 				.find('header').removeClass('small-14').addClass('small-9')
 				.end()
 				.find('p').removeClass('small-14').addClass('small-9');
@@ -106,7 +107,18 @@ function thoughtColors() {
 			case 3: 
 				$(this).addClass('large-offset-1 red');
 			break;
-		}
+		};
+
+		var dt = $(this).data('thumb');
+
+		$('.thought-thumb',this).css({
+			height: '100%',
+			backgroundImage: 'url('+dt+')',
+			backgroundSize: 'cover',
+			backgroundRepeat: 'no-repeat',
+			top: 0,
+			right: 0
+		})
 	});
 };
 
