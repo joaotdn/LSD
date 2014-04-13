@@ -3,11 +3,15 @@
  */
 body { 
 	overflow-y: hidden; 
-	overflow-x: hidden; 
+	//overflow-x: hidden; 
 	background: url(images/body-pattern.png);
 }
 figure {
 	margin: 0;
+}
+.reveal-modal {
+	height: 100%;
+	position: fixed;
 }
 /**
  * Utility classes
@@ -40,6 +44,9 @@ figure {
 .full-width {
 	width: 100%;
 }
+.black {
+	color: $black;
+}
 
 //fonts
 .font-lite {
@@ -65,8 +72,9 @@ figure {
 	top: 0;
 	left: 0;
 	height: 100%;
+	@include single-transition(height,.3s,ease-in);
 	background: $blue;
-	z-index: 99;
+	z-index: 9999;
 }
 
 .logo {
@@ -106,9 +114,86 @@ figure {
  */
 #footer {
 	padding: rem-calc(20);
+	padding-left: 4rem;
 	background: #333;
 	bottom: 0;
 	left:0;
+	@extend %transition-opacity;
+	
+	p {
+		font-size: rem-calc(10);
+		margin: 0;
+		color: #777;
+	}
+
+	h6 {
+		font-size: rem-calc(12);
+		color: #ddd;
+		margin: 0;
+	}
+}
+
+.this-thought {
+	h6 {
+		a {
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}
+
+/**
+ * Menu options
+ */
+.options-menu {
+	height: rem-calc(150);
+	position: fixed;
+	width: rem-calc(444);
+	z-index: 999;
+}
+
+.bt-option {
+	display: block;
+	width: 33.3333%;
+	height: 100%;
+	-webkit-transition: background-color .3s linear;
+	-moz-transition: background-color .3s linear;
+	-ms-transition: background-color .3s linear;
+	-o-transition: background-color .3s linear;
+	transition: background-color .3s linear;
+
+	&.orange {
+		background: $yellow;
+
+		&:hover {
+			background: shade($yellow, 20%);
+		}
+	}
+
+	&.red {
+		background: $pink;
+
+		&:hover {
+			background: shade($pink, 20%);
+		}
+	}
+
+	&.white {
+		background: white;
+
+		&:hover {
+			background: shade(white, 20%);
+		}
+	}
+
+	div {
+		margin-top: 40%;
+	}
+
+	small {
+		margin-top: rem-calc(10);
+	}
 }
 
 

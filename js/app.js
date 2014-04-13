@@ -16,7 +16,7 @@ $(window).bind('load resize' ,function(e) {
 		max_height = 720;
 	}
 
-	$('.h-timeline ,#main-menu').css({
+	$('.h-timeline').css({
 		height : max_height
 	});
 });
@@ -84,7 +84,7 @@ function projectsTitles() {
 
 projectsTitles();
 
-function thoughtColors() {
+/*function thoughtColors() {
 	var count = $('.this-thought').length;
 	$.each($('.this-thought'),function(i) {
 		switch(i % 4) {
@@ -120,9 +120,72 @@ function thoughtColors() {
 			right: 0
 		})
 	});
+};*/
+
+//thoughtColors();
+
+function thought() {
+            var count = $('.this-thought').length;
+            $.each($('.this-thought'),function(i) {
+                switch(i % 4) {
+            case 0: 
+                $(this).addClass('blue small-offset-1');
+            break;
+
+            case 1: 
+                $(this).addClass('yellow');
+            break;
+
+            case 2: 
+                $(this).addClass('violet-lite large-offset-2')
+                .append('<div class="violet-block small-3 abs"></div><figure class="thought-thumb abs small-9 abs"></figure>');
+            break;
+
+            case 3: 
+                $(this).addClass('large-offset-2 red');
+            break;
+        };
+
+        var dt = $(this).data('thumb');
+
+        $('.thought-thumb',this).css({
+            height: '100%',
+            backgroundImage: 'url('+dt+')',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            top: 0,
+            left: '100%'
+        })
+        });
 };
 
-thoughtColors();
+thought();
+
+/**
+ * Request content on post timeline 
+ */
+function requestPostContent() {
+	$('a[data-reveal]','.post-articles').on('click touchstart',function(e) {
+		e.preventDefault();
+		$('#footer').css({
+			opacity: 0
+		});
+		$('#main-menu').css({
+			height: '710px'
+		});
+	});
+
+	//return initial config
+	$('.close-reveal-modal').on('click touchstart',function() {
+		$('#footer').css({
+			opacity: 1
+		});
+		$('#main-menu').css({
+			height: '100%'
+		});
+	});
+};
+requestPostContent();
 
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs

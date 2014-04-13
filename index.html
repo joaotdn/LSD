@@ -2,15 +2,16 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
     <title>LSD | Laboratório de Sistemas Distribuídos</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <!--<script src="bower_components/modernizr/modernizr.js"></script>-->
 </head>
 
 <body>
     
-    <div id="main-menu" class="show-for-large-up">
+    <div id="main-menu">
         <div class="row rel">
             
             <figure class="logo small-18 left">
@@ -41,7 +42,11 @@
         </div><!-- //row -->
 
         <footer class="small-18 abs" id="footer">
-                    
+            <p class="text-upp font-lite">Av. Aprígio Veloso, 882</p>
+            <p class="text-upp font-lite">Bloco CO, Bodocongó</p>
+            <p class="text-upp font-lite">Campina Grande - PB, Brasil</p>
+            <h6 class="text-upp">Fone: +55 83 2101 1365</h6>
+            <h6 class="text-upp">Fax: +55 83 2101 1365</h6>
         </footer><!-- //footer -->
         
     </div><!-- //main-menu -->
@@ -50,32 +55,47 @@
         
     </div>
 
-    <div class="h-timeline show-for-large-up">
+    <div class="h-timeline">
+
+        <div class="options-menu small-4">
+            <a href="#" class="bt-option orange left">
+                <div class="icon-usa centered"></div>
+                <small class="text-upp small-18 left text-center white">English</small>
+            </a>
+            <a href="#" class="bt-option red left">
+                <div class="icon-lock centered"></div>
+                <small class="text-upp small-18 left text-center white">Acesso restrito</small>
+            </a>
+            <a href="#" class="bt-option white left">
+                <div class="icon-search centered"></div>
+                <small class="text-upp small-18 left text-center black">Busca</small>
+            </a>
+        </div>
 
         <nav class="post-articles">
 
-        <div class="row list-articles left large-offset-2">
+        <div class="row list-articles left small-offset-2">
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                 
                 <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal" data-reveal-id="post-modal" data-reveal>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
                 <small class="abstract-post text-upp small-16 small-offset-1 left font-lite">
-                    <a href="#" title="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                    <a href="#" title="" data-reveal-id="post-modal" data-reveal>Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
                 </small>
 
             </article>
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                  <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -84,11 +104,11 @@
                 </small>
             </article>
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                  <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -97,11 +117,11 @@
                 </small>
             </article>
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                  <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -110,42 +130,42 @@
                 </small>
             </article>
 
-            </div>
+        </div>
 
             <div class="list-projects row left">
 
-                <article class="large-4 columns left">
+                <article class="small-4 columns left">
                     <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);">
-                        <figcaption class="small-11 columns large-offset-4 this-pj">
+                        <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp">Gisella</a></h3>
+                                <h3><a href="#" title="" class="text-upp font-bold get-modal">Gisella</a></h3>
                             </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                         </figcaption>
                     </figure>
                 </article>
 
-                <article class="large-4 columns left">
+                <article class="small-4 columns left">
                     <figure class="project-thumb small-18 left" style="background-image:url(midias/pj2.jpg);">
-                        <figcaption class="small-11 columns large-offset-4 this-pj">
+                        <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp">Gisella</a></h3>
+                                <h3><a href="#" title="" class="text-upp font-bold get-modal">Gisella</a></h3>
                             </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                         </figcaption>
                     </figure>
                 </article>
 
-                <article class="large-4 columns left">
+                <article class="small-4 columns left">
                     <figure class="project-thumb small-18 left" style="background-image:url(midias/pj3.jpg);">
-                        <figcaption class="small-11 columns large-offset-4 this-pj">
+                        <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp">Gisella</a></h3>
+                                <h3><a href="#" title="" class="text-upp font-bold get-modal">Gisella</a></h3>
                             </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                         </figcaption>
                     </figure>
                 </article>
@@ -153,44 +173,44 @@
             </div>
 
             <div class="list-thought row left">
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
 
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
 
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
 
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
             </div>
         </nav>
@@ -199,12 +219,12 @@
 
         <div class="row list-articles left">
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                 
                 <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -214,11 +234,11 @@
 
             </article>
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                  <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -227,11 +247,11 @@
                 </small>
             </article>
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                  <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -240,11 +260,11 @@
                 </small>
             </article>
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                  <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -255,85 +275,85 @@
 
             </div>
 
-            <div class="list-projects row left large-pull-2">
+            <div class="list-projects row left small-pull-2">
 
-                <article class="large-4 columns left">
+                <article class="small-4 columns left">
                     <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);">
-                        <figcaption class="small-11 columns large-offset-4 this-pj">
+                        <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp">Gisella</a></h3>
+                                <h3><a href="#" title="" class="text-upp font-bold get-modal">Gisella</a></h3>
                             </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                         </figcaption>
                     </figure>
                 </article>
 
-                <article class="large-4 columns left">
+                <article class="small-4 columns left">
                     <figure class="project-thumb small-18 left" style="background-image:url(midias/pj2.jpg);">
-                        <figcaption class="small-11 columns large-offset-4 this-pj">
+                        <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp">Gisella</a></h3>
+                                <h3><a href="#" title="" class="text-upp font-bold get-modal">Gisella</a></h3>
                             </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                         </figcaption>
                     </figure>
                 </article>
 
-                <article class="large-4 columns left">
+                <article class="small-4 columns left">
                     <figure class="project-thumb small-18 left" style="background-image:url(midias/pj3.jpg);">
-                        <figcaption class="small-11 columns large-offset-4 this-pj">
+                        <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp">Gisella</a></h3>
+                                <h3><a href="#" title="" class="text-upp font-bold get-modal">Gisella</a></h3>
                             </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                         </figcaption>
                     </figure>
                 </article>
 
             </div>
 
-            <div class="list-thought row left large-pull-3">
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+            <div class="list-thought row left small-pull-1">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
 
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
 
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
 
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
             </div>
         </nav>
@@ -347,7 +367,7 @@
                 <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -357,11 +377,11 @@
 
             </article>
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                  <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -370,11 +390,11 @@
                 </small>
             </article>
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                  <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -383,11 +403,24 @@
                 </small>
             </article>
 
-            <article class="small-2 columns left large-offset-2">
+            <article class="small-2 columns left small-offset-2">
                  <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
                     <p class="title-post text-upp">
-                        <a href="#" title="" class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
+                    </p>
+                </div>
+
+                <small class="abstract-post text-upp small-16 small-offset-1 left font-lite">
+                    <a href="#" title="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                </small>
+            </article>
+
+            <article class="small-2 columns left small-offset-2">
+                 <div class="small-16 small-offset-1 columns this-post">
+                    <h5 class="cat-post small-18 left text-upp"><a href="#">Artigos</a></h5>
+                    <p class="title-post text-upp">
+                        <a href="#" title="" class="white get-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi nostrum ex.</a>
                     </p>
                 </div>
 
@@ -398,92 +431,117 @@
 
             </div>
 
-            <div class="list-projects row left large-pull-4">
+            <div class="list-projects row left small-pull-4">
 
-                <article class="large-4 columns left">
+                <article class="small-4 columns left">
                     <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);">
-                        <figcaption class="small-11 columns large-offset-4 this-pj">
+                        <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp">Gisella</a></h3>
+                                <h3><a href="#" title="" class="text-upp font-bold get-modal">Gisella</a></h3>
                             </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                         </figcaption>
                     </figure>
                 </article>
 
-                <article class="large-4 columns left">
+                <article class="small-4 columns left">
                     <figure class="project-thumb small-18 left" style="background-image:url(midias/pj2.jpg);">
-                        <figcaption class="small-11 columns large-offset-4 this-pj">
+                        <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp">Gisella</a></h3>
+                                <h3><a href="#" title="" class="text-upp font-bold get-modal">Gisella</a></h3>
                             </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                         </figcaption>
                     </figure>
                 </article>
 
-                <article class="large-4 columns left">
+                <article class="small-4 columns left">
                     <figure class="project-thumb small-18 left" style="background-image:url(midias/pj3.jpg);">
-                        <figcaption class="small-11 columns large-offset-4 this-pj">
+                        <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp">Gisella</a></h3>
+                                <h3><a href="#" title="" class="text-upp font-bold get-modal">Gisella</a></h3>
                             </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="small-4 columns left small-push-2">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);">
+                        <figcaption class="small-11 columns small-offset-4 this-pj">
+                            <header class="pj-title small-9 left">
+                                <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
+                                <h3><a href="#" title="" class="text-upp font-bold get-modal">Gisella</a></h3>
+                            </header>
+                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                         </figcaption>
                     </figure>
                 </article>
 
             </div>
 
-            <div class="list-thought row left large-pull-6">
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+            <div class="list-thought row left small-pull-2">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
 
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
 
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
 
-                <article class="large-3 left columns this-thought" data-thumb="midias/th1.jpg">
+                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
                         <span class="white text-upp font-lite">
                             <time pubdate>26 de outubro de 2011</time>
                         </span>
                     </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
+                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal">Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
             </div>
         </nav>
 
     </div><!-- //timeline -->
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Modals -->
+    <div id="post-modal" class="reveal-modal" data-reveal>
+        <div class="row">
+            <div class="small-10 left post-thumb">
+                
+            </div>
+        </div><!-- //row -->
+        <a class="close-reveal-modal">&#215;</a>
+    </div><!-- //post-modals -->
+
+    <!-- //Modals -->
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
     <script src="js/scripts.js"></script>
     <script>
         $(document).ready(function() {
