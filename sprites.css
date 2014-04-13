@@ -1,24 +1,24 @@
 .icon-lock {
   background-image: url(images/spritesheet.png);
-  background-position: -12px -158px;
+  background-position: -12px -160px;
   width: 10px;
   height: 12px;
 }
 .icon-logo {
   background-image: url(images/spritesheet.png);
   background-position: 0px 0px;
-  width: 178px;
-  height: 158px;
+  width: 183px;
+  height: 160px;
 }
 .icon-search {
   background-image: url(images/spritesheet.png);
-  background-position: 0px -158px;
+  background-position: 0px -160px;
   width: 12px;
   height: 14px;
 }
 .icon-usa {
   background-image: url(images/spritesheet.png);
-  background-position: -22px -158px;
+  background-position: -22px -160px;
   width: 20px;
   height: 11px;
 }

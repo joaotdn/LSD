@@ -1,3 +1,18 @@
+
+$('body').perfectScrollbar({
+    wheelSpeed: 10,
+    wheelPropagation: false,
+    suppressScrollY: true
+});
+
+
+$('.post-text').perfectScrollbar({
+    wheelSpeed: 10,
+    wheelPropagation: false,
+    suppressScrollX: true
+});
+
+
 function adjustRowsTimeline() {
 	var num_rows = $('.post-articles','.h-timeline').length,
 		row_width = $('.post-articles','.h-timeline').width(),
@@ -10,15 +25,19 @@ adjustRowsTimeline();
 $(window).bind('load resize' ,function(e) {
 	var max_height;
 
-	if($(window).height() >= 720) {
+	if($(window).height() >= 677) {
 		max_height = $(window).height();
 	} else {
-		max_height = 720;
+		max_height = 677;
 	}
 
 	$('.h-timeline').css({
 		height : max_height
 	});
+
+    $('.post-text').css({
+        height : max_height - 300
+    });
 });
 
 function worksList() {
