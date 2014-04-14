@@ -3,3 +3,23 @@
 		display: none;
 	}
 }
+
+@media screen and (min-width: rem-calc(320)) and (max-width: rem-calc(1200)) {
+	.post-thumb {
+		width: rem-calc(600) !important;
+	}
+	.post-content {
+		margin-left: rem-calc(600);
+	}
+
+	.post-header {
+		&.article {
+			width: rem-calc(300);
+
+			h1 {
+				font-size: rem-calc(50);
+				margin-left: rem-calc(20);
+			}
+		}
+	}
+}

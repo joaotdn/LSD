@@ -1,17 +1,16 @@
 
 $('body').perfectScrollbar({
-    wheelSpeed: 10,
+    wheelSpeed: 20,
     wheelPropagation: false,
     suppressScrollY: true
 });
 
 
-$('.post-text').perfectScrollbar({
-    wheelSpeed: 10,
+$('.post-text, .article-text, .article-list, .thought-post').perfectScrollbar({
+    wheelSpeed: 20,
     wheelPropagation: false,
     suppressScrollX: true
 });
-
 
 function adjustRowsTimeline() {
 	var num_rows = $('.post-articles','.h-timeline').length,
@@ -36,7 +35,15 @@ $(window).bind('load resize' ,function(e) {
 	});
 
     $('.post-text').css({
-        height : max_height - 300
+        height : max_height - 260
+    });
+
+    $('.article-text').css({
+        height : max_height - 460
+    });
+
+    $('.article-list').css({
+        height : max_height - 200
     });
 });
 
@@ -184,7 +191,7 @@ thought();
  * Request content on post timeline 
  */
 function requestPostContent() {
-	$('a[data-reveal]','.post-articles').on('click touchstart',function(e) {
+	$('a[data-reveal]').on('click touchstart',function(e) {
 		e.preventDefault();
 		$('#footer').css({
 			opacity: 0

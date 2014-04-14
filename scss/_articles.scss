@@ -1,0 +1,83 @@
+/**
+ * Articles page
+ */
+.select-options {
+	width: rem-calc(444);
+	height: 100%;
+	left: rem-calc(300);
+	background: $pink;
+
+	header {
+		background: white;
+		margin-top: rem-calc(150);
+		
+		h1 {
+			font-size: rem-calc(80);
+			color: $pink;
+		}
+	}
+}
+
+.article-options {
+	h3 {
+		margin-top: 0;
+		&:first-child {
+			margin-top: rem-calc(40);
+		}
+	}
+}
+
+.article-tags {
+	a {
+		@extend %font-lite;
+		@extend %white;
+		@extend %text-upp;
+		font-size: rem-calc(10);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.article-list {
+	width: rem-calc(600);
+	height: rem-calc(700);
+	padding: rem-calc(20);
+	top: rem-calc(150);
+	left: rem-calc(744);
+	overflow: hidden;
+
+	p {
+		margin-bottom: rem-calc(5);
+		font-size: rem-calc(12);
+		@extend %font-lite;
+
+		&.article-authors {
+			@extend %font-bold;
+			color: $pink;
+		}
+
+		a {
+			color: $pink;
+		}
+	}
+
+	a {
+		@extend %transition-color;
+		&:hover {
+			color: tint($black, 20%);
+		}
+	}
+
+	li {
+		border-top: 1px solid $black;
+		padding-top: rem-calc(10);
+		margin-top: rem-calc(10);
+
+		&:first-child {
+			border: none;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}

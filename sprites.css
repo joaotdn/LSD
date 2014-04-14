@@ -1,6 +1,6 @@
 .icon-lock {
   background-image: url(images/spritesheet.png);
-  background-position: -12px -160px;
+  background-position: -195px -132px;
   width: 10px;
   height: 12px;
 }
@@ -10,15 +10,27 @@
   width: 183px;
   height: 160px;
 }
+.icon-next-post {
+  background-image: url(images/spritesheet.png);
+  background-position: -183px 0px;
+  width: 33px;
+  height: 66px;
+}
+.icon-prev-post {
+  background-image: url(images/spritesheet.png);
+  background-position: -183px -66px;
+  width: 33px;
+  height: 66px;
+}
 .icon-search {
   background-image: url(images/spritesheet.png);
-  background-position: 0px -160px;
+  background-position: -183px -132px;
   width: 12px;
   height: 14px;
 }
 .icon-usa {
   background-image: url(images/spritesheet.png);
-  background-position: -22px -160px;
+  background-position: -183px -146px;
   width: 20px;
   height: 11px;
 }

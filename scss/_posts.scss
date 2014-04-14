@@ -72,14 +72,14 @@
 
 	p {
 		@extend %font-regular;
-		font-size: rem-calc(14);
+		@extend %font-14;
 	}
 }
 
 .post-text {
 	overflow: hidden;
 	height: rem-calc(600);
-	width: 100%;
+	width: rem-calc(560) !important;
 	top: rem-calc(80);
 
 	p {
@@ -94,10 +94,51 @@
 	}
 	span {
 		color: $pink;
-		font-size: rem-calc(14);
-		margin: rem-calc(10) 0;
+		@extend %font-14;
+		margin: rem-calc(5) 0;
+		&.locality {
+			@extend %black;
+			@extend %italic;
+		}
+		&.categories {
+			//margin-top: 0;
+			@extend %black;
+			font-size: rem-calc(10);
+			a {
+				@extend %black;
+			}
+			
+		}
+		&.article-pdf {
+			a {
+				@extend %black;
+			}
+		}
 	}
 	a {
 		color: $pink;
+	}
+	time {
+		@extend %font-14;
+		margin: rem-calc(5) 0;
+	}
+}
+
+.article-share {
+	padding: rem-calc(10);
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+	margin-top: rem-calc(10);
+	margin-bottom: rem-calc(20);
+}
+
+.article-text {
+	width: rem-calc(560);
+	height: rem-calc(300);
+	top: rem-calc(300);
+	overflow: hidden;
+
+	p {
+		padding-right: rem-calc(20);
 	}
 }

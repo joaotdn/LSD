@@ -13,6 +13,9 @@ figure {
 	height: 100%;
 	position: fixed;
 }
+select {
+	padding: rem-calc(10) !important;
+}
 /**
  * Utility classes
  */
@@ -22,6 +25,9 @@ figure {
 
 .rel {
 	position: relative;
+}
+.display-block {
+	display: block;
 }
 
 .fix {
@@ -47,6 +53,9 @@ figure {
 .black {
 	color: $black;
 }
+.red {
+	color: $pink;
+}
 
 //fonts
 .font-lite {
@@ -61,7 +70,19 @@ figure {
 }
 .font-regular {
 	font-family: 'Share-Regular' !important;
-}	
+}
+.font-14 {
+	@extend %font-14;
+}
+.font-10 {
+	font-size: rem-calc(10);
+}
+.font-12 {
+	font-size: rem-calc(12);
+}
+.text-italic {
+	font-style: italic;
+}
 
 /**
  * Main menu

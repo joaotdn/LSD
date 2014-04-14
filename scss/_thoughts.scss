@@ -1,0 +1,85 @@
+/**
+ * Pensadouro
+ */
+.thought-header {
+	top: 0;
+	left: 0;
+	width: rem-calc(744);
+	height: 100%;
+	background: white;
+}
+
+.thought-nav {
+	width: rem-calc(444);
+	background: $black;
+	margin-top: rem-calc(150);
+
+	a {
+		@include single-transition;
+		width: 50%;
+		padding: rem-calc(40) rem-calc(20);
+
+		&:hover {
+			color: shade(white, 20%);
+			background: #222;
+		}
+	}
+
+	span {
+		padding-top: rem-calc(30);
+	}
+}
+
+.the-thought {
+	width: rem-calc(444);
+	margin-top: rem-calc(30);
+
+	h1 {
+		color: #efefef;
+		line-height: 1;
+		margin: 0;
+		margin-left: rem-calc(30);
+		font-size: rem-calc(90);
+		@extend %font-bold;
+	}
+
+	span {
+		color: $blue;
+	}
+}
+
+.thought-post {
+	width: rem-calc(600px);
+	height: 100%;
+	overflow: hidden;
+	left: rem-calc(744);
+	padding-right: rem-calc(20);
+}
+
+.thought-thumb {
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: rem-calc(400);
+}
+
+.blog-header {
+	margin-top: rem-calc(30);
+
+	time {
+		color: $blue;
+	}
+}
+
+.share-thought {
+ 	margin-bottom: rem-calc(20);
+ 	border-top: 1px solid $black;
+ 	border-bottom: 1px solid $black;
+ 	padding: rem-calc(10) 0;
+}
+
+.thought-text {
+	width: rem-calc(600);
+	height: rem-calc(290);
+	top: rem-calc(570);
+}
