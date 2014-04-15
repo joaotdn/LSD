@@ -1,12 +1,12 @@
 
-$('body').perfectScrollbar({
+/*$('body').perfectScrollbar({
     wheelSpeed: 20,
     wheelPropagation: false,
     suppressScrollY: true
-});
+});*/
 
 
-$('.post-text, .article-text, .article-list, .thought-post').perfectScrollbar({
+$('.post-text, .article-text, .article-list, .thought-post, .group-list, .search-result').perfectScrollbar({
     wheelSpeed: 20,
     wheelPropagation: false,
     suppressScrollX: true
@@ -44,6 +44,18 @@ $(window).bind('load resize' ,function(e) {
 
     $('.article-list').css({
         height : max_height - 200
+    });
+
+    $('.list-team').css({
+        height : max_height - 150
+    });
+
+    $('.group-list').css({
+        height : max_height - 320
+    });
+
+    $('.search-result').css({
+        height : max_height - 430
     });
 });
 

@@ -1,0 +1,41 @@
+/**
+ * Team page
+ */
+.list-team {
+	width: rem-calc(1044);
+	padding: rem-calc(20);
+	margin-top: rem-calc(150) !important;
+	margin-left: rem-calc(300);
+	height: 400px;
+
+	h1 {
+		color: $blue;
+		font-size: rem-calc(82);
+	}
+}
+
+.group-list {
+	height: 400px;
+	bottom: 20px;
+	left: rem-calc(20);
+	overflow: hidden;
+
+	p {
+		font-size: rem-calc(14);
+		margin-bottom: 0;
+
+		&.name {
+			color: $pink;
+		}
+	}
+	span {
+		font-size: rem-calc(12);
+	}
+
+	img {
+		@include border-radius(50%);
+	}
+	ul {
+		padding-right: rem-calc(20);
+	}
+}

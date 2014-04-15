@@ -1,3 +1,9 @@
+.icon-go {
+  background-image: url(images/spritesheet.png);
+  background-position: -203px -146px;
+  width: 13px;
+  height: 9px;
+}
 .icon-lock {
   background-image: url(images/spritesheet.png);
   background-position: -195px -132px;

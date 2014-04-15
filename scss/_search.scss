@@ -1,0 +1,55 @@
+.search-header {
+	h2 {
+		font-size: rem-calc(72);
+		color: $blue-lite
+	}
+}
+
+.search-form {
+	input {
+		padding: 0;
+		font-size: rem-calc(90);
+		color: $black;
+		text-transform: uppercase;
+		border: none;
+		@include box-shadow(none);
+		height: auto;
+		@extend %font-bold;
+
+		&:focus {
+			@include box-shadow(none);
+			background: white;
+		}
+	}
+}
+
+.search-result {
+	height: 400px;
+	overflow: hidden;
+	padding-right: rem-calc(20);
+
+	h6 {
+		margin-bottom: 0;
+		
+		&.bd {
+			border-bottom: 1px solid $black;
+			margin-bottom: rem-calc(30);
+		}
+	}
+
+	a {
+		&:hover {
+			.icon-go {
+				@include transform(translateX(10px));
+			}
+		}
+	}
+	p {
+		margin-bottom: rem-calc(20);
+	}
+}
+
+.icon-go {
+	margin: rem-calc(5) 0 0 rem-calc(10);
+	@include single-transition;
+}
