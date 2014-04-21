@@ -18,7 +18,7 @@
                 <a href="#" title="Página principal"><div class="icon-logo centered"></div></a>
             </figure>
 
-            <nav class="nav-menu small-16 left">
+            <nav class="nav-menu small-16 left rel">
                 <ul class="no-bullet">
                     <li>
                         <h4><a href="#" title="">Lab</a></h4>
@@ -34,8 +34,8 @@
 
                     </li>
                     <li><h4><a href="#" title="" data-reveal-id="article-page-modal" data-reveal>Artigos</a></h4></li>
-                    <li><h4><a href="#" title="">Projetos</a></h4></li>
-                    <li><h4><a href="#" title="">Pensadouro</a></h4></li>
+                    <li><h4><a href="#" title="" class="get-category-timeline" data-category="projetos">Projetos</a></h4></li>
+                    <li><h4><a href="#" title="" class="get-category-timeline" data-category="pensadouro">Pensadouro</a></h4></li>
                     <li><h4><a href="#" title="">Contatos</a></h4></li>
                 </ul>
             </nav>
@@ -56,6 +56,10 @@
     </div>
 
     <div class="h-timeline">
+
+        <figure class="loading">
+            <img src="images/loading.gif" alt="">
+        </figure>
 
         <div class="options-menu small-4">
             <a href="#" class="bt-option orange left">
@@ -138,7 +142,7 @@
             <div class="list-projects row left">
 
                 <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);" data-reveal-id="post-modal" data-reveal>
                         <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
@@ -150,7 +154,7 @@
                 </article>
 
                 <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj2.jpg);">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj2.jpg);" data-reveal-id="post-modal" data-reveal>
                         <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
@@ -162,7 +166,7 @@
                 </article>
 
                 <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj3.jpg);">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj3.jpg);" data-reveal-id="post-modal" data-reveal>
                         <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
@@ -222,7 +226,8 @@
         <!-- //PENSADOURO -->
 
         <nav class="post-articles">
-
+        
+        <!-- ARTIGOS -->
         <div class="row list-articles left">
 
             <article class="small-2 columns left small-offset-2">
@@ -280,11 +285,13 @@
             </article>
 
             </div>
+            <!-- //ARTIGOS -->
 
             <div class="list-projects row left small-pull-2">
-
+                
+                <!-- PROJETOS -->
                 <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);" data-reveal-id="post-modal" data-reveal>
                         <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
@@ -296,7 +303,7 @@
                 </article>
 
                 <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj2.jpg);">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj2.jpg);" data-reveal-id="post-modal" data-reveal>
                         <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
@@ -308,7 +315,7 @@
                 </article>
 
                 <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj3.jpg);">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj3.jpg);" data-reveal-id="post-modal" data-reveal>
                         <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
@@ -318,9 +325,11 @@
                         </figcaption>
                     </figure>
                 </article>
+                <!-- //PROJETOS -->
 
             </div>
 
+            <!-- PENSADOURO -->
             <div class="list-thought row left small-pull-1">
                 <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
@@ -362,12 +371,14 @@
                     <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="thought-modal" data-reveal>Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
             </div>
-        </nav>
+            <!-- //PENSADOURO -->
+
+        </nav><!-- //END COLUMN -->
 
         <nav class="post-articles">
 
         <div class="row list-articles left">
-
+            <!-- ARTIGOS -->
             <article class="small-2 columns left">
                 
                 <div class="small-16 small-offset-1 columns this-post">
@@ -434,13 +445,14 @@
                     <a href="#" title="" data-reveal-id="article-modal" data-reveal>Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
                 </small>
             </article>
+            <!-- //ARTIGOS -->
 
             </div>
 
             <div class="list-projects row left small-pull-4">
-
+                <!-- PROJETOS -->
                 <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);" data-reveal-id="post-modal" data-reveal>
                         <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
@@ -452,7 +464,7 @@
                 </article>
 
                 <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj2.jpg);">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj2.jpg);" data-reveal-id="post-modal" data-reveal>
                         <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
@@ -464,7 +476,7 @@
                 </article>
 
                 <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj3.jpg);">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj3.jpg);" data-reveal-id="post-modal" data-reveal>
                         <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
@@ -476,7 +488,7 @@
                 </article>
 
                 <article class="small-4 columns left small-push-2">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);">
+                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);" data-reveal-id="post-modal" data-reveal>
                         <figcaption class="small-11 columns small-offset-4 this-pj">
                             <header class="pj-title small-9 left">
                                 <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
@@ -486,10 +498,12 @@
                         </figcaption>
                     </figure>
                 </article>
+                <!-- //PROJETOS -->
 
             </div>
 
             <div class="list-thought row left small-pull-2">
+                <!-- PENSADOURO -->
                 <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
                     <header class="small-14 small-offset-2 left">
                         <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
@@ -529,6 +543,7 @@
                     </header>
                     <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="thought-modal" data-reveal>Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
                 </article>
+                <!-- //PENSADOURO -->
             </div>
         </nav>
 

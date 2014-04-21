@@ -3,8 +3,9 @@
  */
 body { 
 	overflow-y: hidden; 
-	overflow-x: hidden; 
+	//overflow-x: hidden; 
 	background: url(images/body-pattern.png);
+	position: relative;
 }
 figure {
 	margin: 0;
@@ -15,6 +16,16 @@ figure {
 }
 select {
 	padding: rem-calc(10) !important;
+}
+.loading {
+	top: 50%;
+	left: 50%;
+	display: none;
+	z-index: 999;
+	position: fixed;
+}
+a {
+	@extend %transition-color;
 }
 /**
  * Utility classes
@@ -106,6 +117,7 @@ select {
 .nav-menu {
 	padding-left: rem-calc(64);
 	margin-top: rem-calc(50);
+	z-index: 999;
 
 	a {
 		@extend %font-bold;

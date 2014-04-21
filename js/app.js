@@ -12,14 +12,15 @@ $('.post-text, .article-text, .article-list, .thought-post, .group-list, .search
     suppressScrollX: true
 });
 
-function adjustRowsTimeline() {
-	var num_rows = $('.post-articles','.h-timeline').length,
-		row_width = $('.post-articles','.h-timeline').width(),
+function adjustRowsTimeline(timeline) {
+	var num_rows = $(timeline,'.h-timeline').length,
+		row_width = $(timeline,'.h-timeline').width(),
 		timeline_width = (num_rows * row_width);
 
 	$('.h-timeline').css('width',timeline_width + 'px');
 };
-adjustRowsTimeline();
+
+adjustRowsTimeline('.post-articles');
 
 $(window).bind('load resize' ,function(e) {
 	var max_height;
@@ -30,33 +31,20 @@ $(window).bind('load resize' ,function(e) {
 		max_height = 677;
 	}
 
-	$('.h-timeline').css({
-		height : max_height
-	});
+    function otherHeight(el,int) {
+        $(el).css({
+            height : max_height - int
+        });
+    }
 
-    $('.post-text').css({
-        height : max_height - 260
-    });
-
-    $('.article-text').css({
-        height : max_height - 460
-    });
-
-    $('.article-list').css({
-        height : max_height - 200
-    });
-
-    $('.list-team').css({
-        height : max_height - 150
-    });
-
-    $('.group-list').css({
-        height : max_height - 320
-    });
-
-    $('.search-result').css({
-        height : max_height - 430
-    });
+    otherHeight('.h-timeline',0);
+    otherHeight('.post-text',260);
+    otherHeight('.article-text',460);
+    otherHeight('.article-list',200);
+    otherHeight('.list-team',150);
+    otherHeight('.group-list',320);
+    otherHeight('.search-result',430);
+    
 });
 
 function worksList() {
@@ -81,7 +69,6 @@ function worksList() {
 		}
 	});
 };
-
 worksList();
 
 function projectsList() {
@@ -121,6 +108,120 @@ function projectsTitles() {
 };
 
 projectsTitles();
+
+/**
+ * Get category page with ajax
+ * @return {html}
+ */
+function getCategory() {
+    $('.get-category-timeline').on('click', function(e) {
+        e.preventDefault();
+        $('.post-articles','.h-timeline').fadeOut('slow', function() {
+            $(this).remove();
+            //$('.h-timeline').css('width','2000px');
+        });
+
+        $.ajax({
+            url : 'category.html',
+            dataType: 'html',
+            type: 'GET',
+            beforeSend : function() {
+                //console.log('go!');
+                $('.loading').fadeIn('fast');
+                $('.request-container').remove();
+            },
+            complete: function() {
+                $('.category-timeline').fadeIn('slow');
+                $('.loading').fadeOut('fast');
+            },
+            success: function(data) {
+                $('.h-timeline').append('<div class="full-width request-container"></div>');
+                $('.request-container').html(data);
+                categoryPostsTL();
+                adjustRowsTimeline('.category-timeline');
+            },
+            error: function(e) {
+                console.log(e.type);
+            }
+        });
+    })
+};
+getCategory();
+
+
+function categoryPostsTL() {
+    $.each($('article','.category-posts'),function(i) {
+        var dt = $(this).data('thumb');
+
+        switch(i % 10) {
+            case 0:
+                $(this).addClass('bg-blue-lite small-4 columns small-offset-4 l-one');
+            break;
+
+            case 1: 
+                $(this).addClass('bg-red small-3 columns small-offset-4 l-one rel')
+                .append('<div class="small-9 bg-violet abs"></div><div class="small-9 bg-yellow abs"></div>');
+            break;
+
+            case 2: 
+                $(this).addClass('bg-violet small-4 columns l-two')
+                
+                .append('<figure class="small-6 left" style="background-image: url('+ dt +'); background-repeat: no-repeat; background-size: cover; background-position: top center; height: 100%;"></figure>')
+                
+                .find('section').removeClass('small-14 small-offset-2').addClass('small-10 small-pull-1 right');
+            break;
+
+            case 3: 
+                $(this).addClass('bg-yellow small-4 small-offset-2 columns l-two')
+
+                .append('<figure class="small-6 left" style="background-image: url('+ dt +'); background-repeat: no-repeat; background-size: cover; background-position: top center; height: 100%;"></figure>')
+                
+                .find('section').removeClass('small-14 small-offset-2').addClass('small-10 small-pull-1 right');
+            break;
+
+            case 4: 
+                $(this).addClass('bg-blue-lite small-5 columns l-two')
+
+                .find('section').removeClass('small-14 small-offset-2').addClass('small-9 small-offset-2');
+            break;
+
+            case 5: 
+                $(this).addClass('bg-blue small-6 columns small-offset-4 l-two')
+
+                .append('<div class="small-5 bg-yellow abs"></div>')
+
+                .append('<figure class="small-8 left" style="background-image: url('+ dt +'); background-repeat: no-repeat; background-size: cover; background-position: top center; height: 100%;"></figure>')
+
+                .find('section').removeClass('small-14 small-offset-2').addClass('small-8 small-pull-1 right');
+            break;
+
+            case 6: 
+                $(this).addClass('bg-violet small-5 columns l-two')
+
+                .append('<figure class="small-6 left" style="background-image: url('+ dt +'); background-repeat: no-repeat; background-size: cover; background-position: top center; height: 100%;"></figure>')
+                
+                .find('section').removeClass('small-14 small-offset-2').addClass('small-10 small-pull-1 right');
+            break;
+
+            case 7: 
+                $(this).addClass('bg-blue small-4 columns small-push-1 l-two');
+            break;
+
+            case 8: 
+                $(this).addClass('bg-red small-4 columns small-push-1 l-two');
+            break;
+
+            case 9: 
+                $(this).addClass('bg-violet-lite small-6 columns small-offset-3 l-two')
+
+                .append('<figure class="small-6 right" style="background-image: url('+ dt +'); background-repeat: no-repeat; background-size: cover; background-position: top center; height: 100%;"></figure>')
+                
+                .find('section').removeClass('small-14 small-offset-2').addClass('small-10 small-offset-1 left');
+            break;
+        }
+    });
+};
+
 
 /*function thoughtColors() {
 	var count = $('.this-thought').length;
@@ -176,7 +277,7 @@ function thought() {
 
             case 2: 
                 $(this).addClass('violet-lite large-offset-2')
-                .append('<div class="violet-block small-3 abs"></div><figure class="thought-thumb abs small-9 abs"></figure>');
+                .append('<div class="violet-block small-3 abs"></div><figure class="thought-thumb abs small-9 abs" data-reveal-id="thought-modal" data-reveal></figure>');
             break;
 
             case 3: 
@@ -224,6 +325,7 @@ function requestPostContent() {
 	});
 };
 requestPostContent();
+
 
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs

@@ -1,0 +1,96 @@
+/**
+ * Settings
+ */
+
+.request-container {
+	height: 100%;
+}
+
+.category-timeline {
+	display: none;
+	width: rem-calc(2000); height: 100%;
+	@extend %rel;
+	float: left;
+
+	a {
+		&:hover {
+			color: $yellow;
+		}
+	}
+}
+
+.category-posts {
+	@extend %abs;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+}
+
+//dimensions
+.l-one {
+	height: 30%;
+}
+.l-two {
+	height: 25%;
+}
+.l-bottom {
+	height: 20%;
+}
+.post-info {
+	margin-top: rem-calc(30);
+	h5 {
+		margin: 0;
+	}
+	time {
+		font-size: rem-calc(12);
+	}
+}
+
+//bg-colors
+%common-block-height {
+	height: 50%;
+}
+
+.bg-blue-lite {
+	background: $blue-lite;
+}
+.bg-red {
+	background: $pink;
+	.bg-violet {
+		@extend %common-block-height;
+		top: 0;
+		right: 100%;
+	}
+
+	.bg-yellow {
+		@extend %common-block-height;
+		bottom: 0;
+		left: 100%;
+	}
+}
+.bg-violet {
+	background: $violet;
+}
+.bg-violet-lite {
+	background: $violet-lite;
+}
+.bg-yellow {
+	background: $yellow;
+}
+.bg-blue {
+	background: $blue;
+
+	.bg-yellow {
+		@extend %common-block-height;
+		top: 0;
+		right: 100%;
+	}
+}
+
+//links
+.post-link {
+	background: $black;
+	a {
+		padding: rem-calc(10);
+		margin-top: rem-calc(10);
+	}
+}

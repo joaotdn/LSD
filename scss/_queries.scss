@@ -2,6 +2,9 @@
 	.sub-menu {
 		display: none;
 	}
+	.post-info {
+		margin-top: rem-calc(10);
+	}
 }
 
 @media screen and (min-width: rem-calc(320)) and (max-width: rem-calc(1200)) {
