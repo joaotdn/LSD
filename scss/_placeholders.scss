@@ -26,6 +26,9 @@
 %transition-opacity {
 	@include single-transition(opacity,.3s,linear);
 }
+%transition {
+	@include single-transition;
+}
 %white {
 	color: white;
 }

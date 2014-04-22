@@ -94,6 +94,13 @@ a {
 .text-italic {
 	font-style: italic;
 }
+.p-regular {
+	p {
+		margin: 0;
+		line-height: 1.4;
+		font-size: rem-calc(14);
+	}
+}
 
 /**
  * Main menu
@@ -226,6 +233,61 @@ a {
 
 	small {
 		margin-top: rem-calc(10);
+	}
+}
+
+//English option
+.english-body {
+	width: rem-calc(600);
+	padding: rem-calc(20);
+	margin-left: rem-calc(744);
+	margin-top: rem-calc(130);
+
+	h3 {
+		color: $blue-lite;
+	}
+
+	article {
+		top: rem-calc(80);
+	}
+}
+
+.english-text {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+
+	ul {
+		padding-right: rem-calc(20);
+		padding-left: rem-calc(5);
+	}
+	p {
+		color: $black;
+		padding-right: rem-calc(20);
+	}
+}
+
+.english-sections {
+	margin-top: rem-calc(20);
+	margin-left: rem-calc(20);
+
+	a {
+		padding: rem-calc(10);
+		border: 2px solid white;
+		@extend %transition;
+
+		&:hover {
+			border-color: $blue-lite;
+		}
+
+		h6 {
+			color: $blue-lite;
+		}
+
+	}
+
+	li {
+		margin: 0;
 	}
 }
 

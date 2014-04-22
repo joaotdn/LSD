@@ -6,7 +6,7 @@
 });*/
 
 
-$('.post-text, .article-text, .article-list, .thought-post, .group-list, .search-result').perfectScrollbar({
+$('.post-text, .article-text, .article-list, .thought-post, .group-list, .search-result, .english-text').perfectScrollbar({
     wheelSpeed: 20,
     wheelPropagation: false,
     suppressScrollX: true
@@ -41,6 +41,7 @@ $(window).bind('load resize' ,function(e) {
     otherHeight('.post-text',260);
     otherHeight('.article-text',460);
     otherHeight('.article-list',200);
+    otherHeight('.english-text',260);
     otherHeight('.list-team',150);
     otherHeight('.group-list',320);
     otherHeight('.search-result',430);
