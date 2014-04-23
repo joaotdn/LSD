@@ -5,12 +5,14 @@
     suppressScrollY: true
 });*/
 
-
+function scrollBarConfig() {
 $('.post-text, .article-text, .article-list, .thought-post, .group-list, .search-result, .english-text').perfectScrollbar({
     wheelSpeed: 20,
     wheelPropagation: false,
     suppressScrollX: true
 });
+};
+scrollBarConfig();
 
 function adjustRowsTimeline(timeline) {
 	var num_rows = $(timeline,'.h-timeline').length,
@@ -224,6 +226,44 @@ function categoryPostsTL() {
 };
 
 
+function requestPostInModal() {
+    $('a[data-reveal]').on('click',function() {
+        var dt      = $(this).data('reveal-id'),
+            modalid = $(this).parents('article').data('modalid');
+
+        console.log(modalid);
+        switch(dt) {
+            case 'article-modal':
+            var action = 'request_article',
+                idt    = '#article-modal';
+            break;
+        }
+
+        $.ajax({
+            url : getData.ajaxDir,
+            dataType: 'html',
+            type: 'GET',
+            data : {
+                action : action,
+                modalid : modalid
+            },
+            beforeSend : function() {
+                console.log('go');
+            },
+            complete : function() {
+                console.log('complete');
+            },
+            success : function(data) {
+                $(idt).html(data);
+                scrollBarConfig();
+                //deleteCarateres('.locality',ind,2);
+            }
+        });
+    });
+};
+requestPostInModal();
+
+
 /*function thoughtColors() {
 	var count = $('.this-thought').length;
 	$.each($('.this-thought'),function(i) {
@@ -263,6 +303,12 @@ function categoryPostsTL() {
 };*/
 
 //thoughtColors();
+//
+function deleteCarateres(input,i,num) {
+    var myString = $(input).eq(i).text();
+    var newString = myString.substr(0, myString.length - num); 
+    $(input).text(newString);
+};
 
 function thought() {
             var count = $('.this-thought').length;

@@ -114,6 +114,10 @@ a {
 	@include single-transition(height,.3s,ease-in);
 	background: $blue;
 	z-index: 9999;
+
+	h4 {
+		line-height: 1;
+	}
 }
 
 .logo {
@@ -125,6 +129,10 @@ a {
 	padding-left: rem-calc(64);
 	margin-top: rem-calc(50);
 	z-index: 999;
+
+	h4 {
+		line-height: 1;
+	}
 
 	a {
 		@extend %font-bold;
@@ -141,12 +149,15 @@ a {
 		a {
 			@extend %font-lite;
 		}
+
+		ul {
+			margin-bottom: 0;
+		}
 	}
 }
 
 .sub-menu {
 	margin-left: 0 !important;
-	margin-bottom: rem-calc(20) !important;
 }
 
 /**
