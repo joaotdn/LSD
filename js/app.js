@@ -41,8 +41,8 @@ $(window).bind('load resize' ,function(e) {
 
     otherHeight('.h-timeline',0);
     otherHeight('.post-text',260);
-    otherHeight('.article-text',460);
-    otherHeight('.article-list',200);
+    otherHeight('.article-text',350);
+    otherHeight('.article-list',300);
     otherHeight('.english-text',260);
     otherHeight('.list-team',150);
     otherHeight('.group-list',320);
@@ -232,10 +232,21 @@ function requestPostInModal() {
             modalid = $(this).parents('article').data('modalid');
 
         console.log(modalid);
+
         switch(dt) {
             case 'article-modal':
             var action = 'request_article',
                 idt    = '#article-modal';
+            break;
+
+            case 'post-modal' :
+            var action = 'request_project',
+                idt    = '#post-modal';
+            break;
+
+            case 'thought-modal' :
+            var action = 'request_thought',
+                idt    = '#thought-modal';
             break;
         }
 
@@ -248,7 +259,7 @@ function requestPostInModal() {
                 modalid : modalid
             },
             beforeSend : function() {
-                console.log('go');
+                console.log(dt);
             },
             complete : function() {
                 console.log('complete');
@@ -256,13 +267,17 @@ function requestPostInModal() {
             success : function(data) {
                 $(idt).html(data);
                 scrollBarConfig();
+                requestPostContent();
+                $(document).foundation();
                 //deleteCarateres('.locality',ind,2);
+            },
+            error : function(e) {
+                alert('Erro ' + e.status + '\nTente novamente.');
             }
         });
     });
 };
 requestPostInModal();
-
 
 /*function thoughtColors() {
 	var count = $('.this-thought').length;

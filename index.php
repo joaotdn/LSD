@@ -26,9 +26,9 @@
         </div>
 
         <?php get_template_part('loop','one'); ?>
-        <?php get_template_part('loop','two'); ?>
-        <?php get_template_part('loop','three'); ?>
-        <?php get_template_part('loop','four'); ?>
+        <?php //get_template_part('loop','two'); ?>
+        <?php //get_template_part('loop','three'); ?>
+        <?php //get_template_part('loop','four'); ?>
         
     </div><!-- //timeline -->
 

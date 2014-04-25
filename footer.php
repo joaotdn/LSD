@@ -1,91 +1,10 @@
 
     <!-- Modals -->
-    <div id="post-modal" class="reveal-modal" data-reveal>
-        <div class="row">
-            <div class="abs post-thumb" style="background-image: url(midias/thumb.jpg);">
-                <header class="post-header abs">
-                    <p class="text-upp font-lite">Projetos</p>
-                    <h1 class="text-upp">Seghidro</h1>
-                </header>
-            </div><!-- post-thumb -->
-            <article class="left post-content rel">
-
-                <nav class="full-width left post-tags">
-                    <dl class="inline-list text-upp font-lite tabs" data-tab>
-                        <dd class="active"><a href="#sobre" title="">Sobre o projeto</a></dd>
-                        <dd><a href="#pilares" title="">Pilares</a></dd>
-                        <dd><a href="#aplicacoes" title="">Aplicações</a></dd>
-                        <dd><a href="#casos" title="">Casos de sucesso</a></dd>
-                        <dd><a href="#publicacoes" title="">Publicações</a></dd>
-                        <dd><a href="#downloads" title="">Downloads</a></dd>
-                        <dd><a href="#contato" title="">Contato</a></dd>
-                    </dl>
-                </nav>
-
-                <div class="tabs-content">
-
-                <div id="sobre" class="post-text full-width abs content active">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, sed, sunt, tenetur nobis dolore nisi molestiae tempore natus architecto quos iste eligendi nesciunt deleniti consectetur odio culpa illum commodi cumque?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem, cupiditate, id quam ipsam earum ut aut fuga officiis quia consequuntur nesciunt nisi repellendus accusantium excepturi. Dolores, labore veritatis beatae?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, et, minima excepturi reiciendis maxime in enim reprehenderit deleniti suscipit unde distinctio consequatur quasi perferendis neque obcaecati veritatis aliquid quos libero.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, voluptate, voluptatum, eum at maiores libero dicta aliquid quia illo animi consequuntur possimus nihil. Voluptate aperiam pariatur veniam totam illum laudantium.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, assumenda, sint, itaque aut asperiores maxime quibusdam magnam molestias dolorem ut qui adipisci similique a necessitatibus neque debitis illo tempora id!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, et, officia, accusamus consequatur minus in aut quo itaque recusandae incidunt voluptatibus molestias eum voluptatum hic saepe earum architecto atque temporibus.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, consequuntur, optio ut commodi numquam velit eum rem perferendis at doloremque aperiam ex expedita repudiandae repellendus molestias rerum omnis in nostrum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, eos, voluptatem, atque unde natus provident laborum quia doloribus similique illo autem culpa in officia error officiis dolorem a sed aliquid.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi eveniet quibusdam similique officia repellat ea nesciunt. Esse, explicabo, facilis in dolorem ipsam qui aperiam doloremque est labore corporis hic placeat.</p>
-                </div>
-
-                <div id="pilares" class="post-text full-width abs content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, sed, sunt, tenetur nobis dolore nisi molestiae tempore natus architecto quos iste eligendi nesciunt deleniti consectetur odio culpa illum commodi cumque?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem, cupiditate, id quam ipsam earum ut aut fuga officiis quia consequuntur nesciunt nisi repellendus accusantium excepturi. Dolores, labore veritatis beatae?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, et, minima excepturi reiciendis maxime in enim reprehenderit deleniti suscipit unde distinctio consequatur quasi perferendis neque obcaecati veritatis aliquid quos libero.</p>
-                </div>
-
-                <div id="aplicacoes" class="post-text full-width abs content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, sed, sunt, tenetur nobis dolore nisi molestiae tempore natus architecto quos iste eligendi nesciunt deleniti consectetur odio culpa illum commodi cumque?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem, cupiditate, id quam ipsam earum ut aut fuga officiis quia consequuntur nesciunt nisi repellendus accusantium excepturi. Dolores, labore veritatis beatae?</p>
-                </div>
-
-                <div id="casos" class="post-text full-width abs content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, sed, sunt, tenetur nobis dolore nisi molestiae tempore natus architecto quos iste eligendi nesciunt deleniti consectetur odio culpa illum commodi cumque?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem, cupiditate, id quam ipsam earum ut aut fuga officiis quia consequuntur nesciunt nisi repellendus accusantium excepturi. Dolores, labore veritatis beatae?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, assumenda, sint, itaque aut asperiores maxime quibusdam magnam molestias dolorem ut qui adipisci similique a necessitatibus neque debitis illo tempora id!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, et, officia, accusamus consequatur minus in aut quo itaque recusandae incidunt voluptatibus molestias eum voluptatum hic saepe earum architecto atque temporibus.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, consequuntur, optio ut commodi numquam velit eum rem perferendis at doloremque aperiam ex expedita repudiandae repellendus molestias rerum omnis in nostrum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, eos, voluptatem, atque unde natus provident laborum quia doloribus similique illo autem culpa in officia error officiis dolorem a sed aliquid.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi eveniet quibusdam similique officia repellat ea nesciunt. Esse, explicabo, facilis in dolorem ipsam qui aperiam doloremque est labore corporis hic placeat.</p>
-                </div>
-
-
-                <div id="publicacoes" class="post-text full-width abs content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, sed, sunt, tenetur nobis dolore nisi molestiae tempore natus architecto quos iste eligendi nesciunt deleniti consectetur odio culpa illum commodi cumque?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem, cupiditate, id quam ipsam earum ut aut fuga officiis quia consequuntur nesciunt nisi repellendus accusantium excepturi. Dolores, labore veritatis beatae?</p>
-                </div>
-
-                <div id="downloads" class="post-text full-width abs content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, sed, sunt, tenetur nobis dolore nisi molestiae tempore natus architecto quos iste eligendi nesciunt deleniti consectetur odio culpa illum commodi cumque?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem, cupiditate, id quam ipsam earum ut aut fuga officiis quia consequuntur nesciunt nisi repellendus accusantium excepturi. Dolores, labore veritatis beatae?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, assumenda, sint, itaque aut asperiores maxime quibusdam magnam molestias dolorem ut qui adipisci similique a necessitatibus neque debitis illo tempora id!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, et, officia, accusamus consequatur minus in aut quo itaque recusandae incidunt voluptatibus molestias eum voluptatum hic saepe earum architecto atque temporibus.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, consequuntur, optio ut commodi numquam velit eum rem perferendis at doloremque aperiam ex expedita repudiandae repellendus molestias rerum omnis in nostrum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, eos, voluptatem, atque unde natus provident laborum quia doloribus similique illo autem culpa in officia error officiis dolorem a sed aliquid.</p>
-                </div>
-
-                 <div id="contato" class="post-text full-width abs content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, sed, sunt, tenetur nobis dolore nisi molestiae tempore natus architecto quos iste eligendi nesciunt deleniti consectetur odio culpa illum commodi cumque?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem, cupiditate, id quam ipsam earum ut aut fuga officiis quia consequuntur nesciunt nisi repellendus accusantium excepturi. Dolores, labore veritatis beatae?</p>
-                </div>
-
-                </div><!-- //tabs-content -->
-            </article><!-- //post-content -->
-        </div><!-- //row -->
-        <a class="close-reveal-modal">&#215;</a>
-    </div><!-- //post-modals -->
+    <div id="post-modal" class="reveal-modal" data-reveal></div><!-- //post-modals -->
 
     <div id="article-modal" class="reveal-modal" data-reveal></div><!-- //article-modal -->
 
-        <div id="article-page-modal" class="reveal-modal" data-reveal>
+    <div id="article-page-modal" class="reveal-modal" data-reveal>
             <section class="select-options abs">
                 <header class="small-18 left text-center">
                     <h1 class="text-upp font-bold">Artigos</h1>
