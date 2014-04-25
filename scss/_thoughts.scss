@@ -72,7 +72,7 @@
 }
 
 .share-thought {
- 	margin-bottom: rem-calc(20);
+ 	//margin-bottom: rem-calc(20);
  	border-top: 1px solid $black;
  	border-bottom: 1px solid $black;
  	padding: rem-calc(10) 0;
@@ -81,7 +81,7 @@
 .thought-text {
 	width: rem-calc(600);
 	height: rem-calc(290);
-	top: rem-calc(570);
+	top: rem-calc(555);
 
 	li {
 		margin: 0;

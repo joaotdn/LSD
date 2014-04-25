@@ -88,13 +88,14 @@ add_action( 'init', 'artigos_init' );
 
 
 /**
- * Article content modal after ajax request
+ * Article single
  */
 add_action( 'wp_ajax_nopriv_request_article', 'request_article' );
 add_action( 'wp_ajax_request_article', 'request_article' );
 
 function request_article() {
     $article_id = $_GET['modalid'];
+
     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($article_id), 'full' );
     $thumb = $thumb['0'];
     ?>
@@ -108,8 +109,9 @@ function request_article() {
             <article class="left post-content rel">
                 <header class="full-width left article-header">
                         <h3 class="font-lite"><?php echo get_the_title($article_id); ?> </h3>
-                        <span class="authors font-bold full-width left">por <?php echo get_the_term_list( $article_id, 'autores', '', ' ,', '' ); ?></span>
-                        <time class="font-bold left full-width">2014</time>
+                        <span class="authors font-bold full-width left anchor-request">por <?php echo get_the_term_list( $article_id, 'autores', '', ' ,', '' ); ?></span>
+                        <?php $year = get_field('article_year', $article_id); ?>
+                        <time class="font-bold left full-width"><?php echo $year; ?></time>
                         <span class="left full-width font-lite locality">
                         <?php 
                             $fields = get_field('articles_fonts', $article_id);
@@ -120,22 +122,20 @@ function request_article() {
                             endif;
                         ?>
                         </span>
-                        <span class="left full-width font-lite categories text-upp">P2P / PARCEIROS / VISITA VIRTUAL</span>
+                        <span class="left full-width font-lite categories text-upp anchor-request"><?php echo get_the_term_list( $article_id, 'tags', '', ' ,', '' ); ?></span>
+                       
                         <div class="article-share left full-width">
-                            <span class="article-pdf right text-upp"><a href="#" title="Download PDF">Download PDF</a></span>
-                        </div> 
+                            <?php 
+                                $pdf = get_field('article_pdf', $article_id); 
+                                if($pdf):
+                            ?>
+                            <span class="article-pdf right text-upp"><a href="<?php echo $pdf; ?>" title="Download PDF">Download PDF</a></span>
+                            <?php endif; ?> 
+                        </div>
                 </header>
 
                 <div class="article-text full-width abs">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, sed, sunt, tenetur nobis dolore nisi molestiae tempore natus architecto quos iste eligendi nesciunt deleniti consectetur odio culpa illum commodi cumque?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem, cupiditate, id quam ipsam earum ut aut fuga officiis quia consequuntur nesciunt nisi repellendus accusantium excepturi. Dolores, labore veritatis beatae?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, et, minima excepturi reiciendis maxime in enim reprehenderit deleniti suscipit unde distinctio consequatur quasi perferendis neque obcaecati veritatis aliquid quos libero.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, voluptate, voluptatum, eum at maiores libero dicta aliquid quia illo animi consequuntur possimus nihil. Voluptate aperiam pariatur veniam totam illum laudantium.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, assumenda, sint, itaque aut asperiores maxime quibusdam magnam molestias dolorem ut qui adipisci similique a necessitatibus neque debitis illo tempora id!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, et, officia, accusamus consequatur minus in aut quo itaque recusandae incidunt voluptatibus molestias eum voluptatum hic saepe earum architecto atque temporibus.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, consequuntur, optio ut commodi numquam velit eum rem perferendis at doloremque aperiam ex expedita repudiandae repellendus molestias rerum omnis in nostrum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, eos, voluptatem, atque unde natus provident laborum quia doloribus similique illo autem culpa in officia error officiis dolorem a sed aliquid.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi eveniet quibusdam similique officia repellat ea nesciunt. Esse, explicabo, facilis in dolorem ipsam qui aperiam doloremque est labore corporis hic placeat.</p>
+                    <?php echo returnContent($article_id); ?>
                 </div>
             </article>
     </div><!-- //row -->

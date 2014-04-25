@@ -1,4 +1,4 @@
-<nav class="post-articles">
+    <nav class="post-articles">
         
         <!-- ARTIGOS -->
         <div class="row list-articles left small-offset-2">      
@@ -6,9 +6,6 @@
                 $args = array( 'post_type' => 'artigos', 'posts_per_page' => 4, 'orderby' => 'date' ); 
                 $loop = new WP_Query( $args );
                 while ( $loop->have_posts() ) : $loop->the_post();
-            
-                //$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(returnId()), 'full' );
-                //$thumb = $thumb['0'];
             ?>
             <article class="small-2 columns left small-offset-2" data-modalid="<?php echo returnId(); ?>">
                 
@@ -29,89 +26,54 @@
         </div>
         <!-- //ARTIGOS -->
             
-            <!-- PROJETOS -->
-            <div class="list-projects row left">
-
-                <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj1.jpg);" data-reveal-id="post-modal" data-reveal>
-                        <figcaption class="small-11 columns small-offset-4 this-pj">
-                            <header class="pj-title small-9 left">
-                                <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp font-bold get-modal" data-reveal-id="post-modal" data-reveal>Gisella</a></h3>
-                            </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="post-modal" data-reveal>Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
-                        </figcaption>
-                    </figure>
-                </article>
-
-                <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj2.jpg);" data-reveal-id="post-modal" data-reveal>
-                        <figcaption class="small-11 columns small-offset-4 this-pj">
-                            <header class="pj-title small-9 left">
-                                <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp font-bold get-modal" data-reveal-id="post-modal" data-reveal>Gisella</a></h3>
-                            </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="post-modal" data-reveal>Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
-                        </figcaption>
-                    </figure>
-                </article>
-
-                <article class="small-4 columns left">
-                    <figure class="project-thumb small-18 left" style="background-image:url(midias/pj3.jpg);" data-reveal-id="post-modal" data-reveal>
-                        <figcaption class="small-11 columns small-offset-4 this-pj">
-                            <header class="pj-title small-9 left">
-                                <h6><a href="#" title="" class="text-upp">Projetos</a></h6>
-                                <h3><a href="#" title="" class="text-upp font-bold get-modal" data-reveal-id="post-modal" data-reveal>Gisella</a></h3>
-                            </header>
-                            <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="post-modal" data-reveal>Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
-                        </figcaption>
-                    </figure>
-                </article>
-
-            </div>
-            <!-- //PROJETOS -->
+        <!-- PROJETOS -->
+        <div class="list-projects row left">
+            <?php 
+                $args = array( 'post_type' => 'projetos', 'posts_per_page' => 3, 'orderby' => 'date' ); 
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post();
             
-            <!-- PENSADOURO -->
-            <div class="list-thought row left">
-                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
-                    <header class="small-14 small-offset-2 left">
-                        <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
-                        <span class="white text-upp font-lite">
-                            <time pubdate>26 de outubro de 2011</time>
-                        </span>
-                    </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="thought-modal" data-reveal>Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
-                </article>
-
-                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
-                    <header class="small-14 small-offset-2 left">
-                        <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
-                        <span class="white text-upp font-lite">
-                            <time pubdate>26 de outubro de 2011</time>
-                        </span>
-                    </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="thought-modal" data-reveal>Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
-                </article>
-
-                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
-                    <header class="small-14 small-offset-2 left">
-                        <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
-                        <span class="white text-upp font-lite">
-                            <time pubdate>26 de outubro de 2011</time>
-                        </span>
-                    </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="thought-modal" data-reveal>Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
-                </article>
-
-                <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg">
-                    <header class="small-14 small-offset-2 left">
-                        <h6><a href="#" title="" class="white text-upp">Pensadouro</a></h6>
-                        <span class="white text-upp font-lite">
-                            <time pubdate>26 de outubro de 2011</time>
-                        </span>
-                    </header>
-                    <p class="small-14 small-offset-2 left thought-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="thought-modal" data-reveal>Ullam doloremque sunt obcaecati sit saepe eo Saepe?</a></p>
-                </article>
-            </div>
-        </nav>
+                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(returnId()), 'medium' );
+                $thumb = $thumb['0']; //Return thumbnail URI
+            ?>
+            <article class="small-4 columns left rel" data-modalid="<?php echo returnId(); ?>">
+                <a href="#" class="white get-modal display-block mask-pjthumb abs" data-reveal-id="post-modal" data-reveal></a>
+                <figure class="project-thumb small-18 left" style="background-image:url(<?php echo $thumb; ?>);" data-reveal-id="post-modal" data-reveal>
+                    <figcaption class="small-11 columns small-offset-4 this-pj">
+                        <header class="pj-title small-9 left">
+                            <h6><a href="#" title="Projetos" class="text-upp get-project-timeline" data-taxname="projetos">Projetos</a></h6>
+                            <h3><?php echo get_single_term(returnId(), 'projetos_categorias'); ?></h3>
+                        </header>
+                        <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="post-modal" data-reveal><?php the_title(); ?></a></p>
+                    </figcaption>
+                </figure>
+            </article>
+            <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
+        </div>
+        <!-- //PROJETOS -->
+            
+        <!-- PENSADOURO -->
+        <div class="list-thought row left">
+            <?php       
+                $category_id = get_cat_ID( 'Pensadouro' );
+                query_posts('showposts=4&category_name=pensadouro'); 
+                if (have_posts()): while (have_posts()) : the_post();
+            ?>
+            <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg" data-modalid="<?php echo returnId(); ?>">
+                <header class="small-14 small-offset-2 left">
+                    <h6><a href="#" title="Pensadouro" class="white text-upp get-category-timeline" data-categoryid="<?php echo $category_id; ?>">Pensadouro</a></h6>
+                    <span class="white text-upp font-lite">
+                        <time pubdate><?php the_time('d \d\e M \d\e Y'); ?></time>
+                    </span>
+                </header>
+                <p class="small-14 small-offset-2 left thought-abstract text-upp">
+                    <a href="#" title="<?php the_title(); ?>" class="white get-modal" data-reveal-id="thought-modal" data-reveal><?php the_title(); ?></a>
+                </p>
+            </article>
+            <?php endwhile; else: endif; wp_reset_query(); ?>
+        </div>
         <!-- //PENSADOURO -->
+
+    </nav>
+        

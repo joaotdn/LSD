@@ -41,8 +41,8 @@ function returnId() {
   return $post->ID;
 }
 
-function returnContent() {
-  $my_postid =  returnId(); //This is page id or post id
+function returnContent($pid) {
+  $my_postid =  $pid; //This is page id or post id
   $content_post = get_post($my_postid);
   $content = $content_post->post_content;
   $content = apply_filters('the_content', $content);
@@ -77,6 +77,55 @@ function get_previous_post_id( $post_id ) {
     return $previous_post->ID;
 }
 
+function get_next_post_id( $post_id ) {
+    // Get a global post reference since get_adjacent_post() references it
+    global $post;
+
+    // Store the existing post object for later so we don't lose it
+    $oldGlobal = $post;
+
+    // Get the post object for the specified post and place it in the global variable
+    $post = get_post( $post_id );
+
+    // Get the post object for the previous post
+    $next_post = get_next_post();
+
+    // Reset our global object
+    $post = $oldGlobal;
+
+    if ( '' == $next_post ) 
+        return 0;
+
+    return $next_post->ID;
+}
+
+function get_single_term($post_id, $taxonomy) 
+{
+    $terms = wp_get_object_terms($post_id, $taxonomy);
+    if(!is_wp_error($terms))
+    {
+        return '<a href="#" title="'.$terms[0]->name.'" class="text-upp font-bold get-modal" data-reveal-id="post-modal" data-reveal>'.$terms[0]->name.'</a>';   
+    }
+}
+
+function get_meta_values( $key = '', $type = 'post', $status = 'publish' ) {
+
+    global $wpdb;
+
+    if( empty( $key ) )
+        return;
+
+    $r = $wpdb->get_col( $wpdb->prepare( "
+        SELECT pm.meta_value FROM {$wpdb->postmeta} pm
+        LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
+        WHERE pm.meta_key = '%s' 
+        AND p.post_status = '%s' 
+        AND p.post_type = '%s'
+    ", $key, $status, $type ) );
+
+    return $r;
+}
+
 /**
  * Agrupar posts por custom field
  * http://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters
@@ -89,5 +138,17 @@ function get_previous_post_id( $post_id ) {
 //Artigos
 require_once ( get_stylesheet_directory() . '/post-types/artigos.php' );
 
+//Projetos
+require_once ( get_stylesheet_directory() . '/post-types/projetos.php' );
+
+//Pensadouro
+require_once ( get_stylesheet_directory() . '/post-types/pensadouro.php' );
+
+/**
+ * Search's
+ */
+
+//Artigos
+require_once ( get_stylesheet_directory() . '/includes/artigos-search.php' );
 
 ?>

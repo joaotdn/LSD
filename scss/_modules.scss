@@ -14,16 +14,32 @@ figure {
 	height: 100%;
 	position: fixed;
 }
+.close-reveal-modal {
+	padding: rem-calc(20);
+	background: white;
+}
 select {
 	padding: rem-calc(10) !important;
 }
-.loading {
-	top: 50%;
-	left: 50%;
+
+%display-load {
 	display: none;
 	z-index: 999;
 	position: fixed;
 }
+
+.loading {
+	@extend %display-load;
+	top: 50%;
+	left: 50%;
+}
+
+.load-post {
+	@extend %display-load;
+	left: rem-calc(954);
+	top: 30%;
+}
+
 a {
 	@extend %transition-color;
 }
@@ -158,6 +174,7 @@ a {
 
 .sub-menu {
 	margin-left: 0 !important;
+	margin-bottom: rem-calc(10);
 }
 
 /**

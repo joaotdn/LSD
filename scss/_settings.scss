@@ -912,8 +912,8 @@ $reveal-box-shadow: none;
 
 // We use these to style the reveal close button
 $reveal-close-font-size: rem-calc(26);
-$reveal-close-top: rem-calc(20);
-// $reveal-close-side: rem-calc(11);
+$reveal-close-top: 0;
+$reveal-close-side: 0;
 $reveal-close-color: #333;
 // $reveal-close-weight: bold;
 

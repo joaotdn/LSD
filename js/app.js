@@ -5,6 +5,12 @@
     suppressScrollY: true
 });*/
 
+$.ajaxSetup({
+    url : getData.ajaxDir,
+    dataType: 'html',
+    type: 'GET',
+});
+
 function scrollBarConfig() {
 $('.post-text, .article-text, .article-list, .thought-post, .group-list, .search-result, .english-text').perfectScrollbar({
     wheelSpeed: 20,
@@ -41,8 +47,8 @@ $(window).bind('load resize' ,function(e) {
 
     otherHeight('.h-timeline',0);
     otherHeight('.post-text',260);
-    otherHeight('.article-text',460);
-    otherHeight('.article-list',200);
+    otherHeight('.article-text',350);
+    otherHeight('.article-list',300);
     otherHeight('.english-text',260);
     otherHeight('.list-team',150);
     otherHeight('.group-list',320);
@@ -232,23 +238,36 @@ function requestPostInModal() {
             modalid = $(this).parents('article').data('modalid');
 
         console.log(modalid);
+
         switch(dt) {
             case 'article-modal':
             var action = 'request_article',
                 idt    = '#article-modal';
             break;
+
+            case 'post-modal' :
+            var action = 'request_project',
+                idt    = '#post-modal';
+            break;
+
+            case 'thought-modal' :
+            var action = 'request_thought',
+                idt    = '#thought-modal';
+            break;
+
+            case 'article-page-modal' :
+            var action = 'request_article_search',
+                idt    = '#article-page-modal';
+            break;
         }
 
         $.ajax({
-            url : getData.ajaxDir,
-            dataType: 'html',
-            type: 'GET',
             data : {
                 action : action,
                 modalid : modalid
             },
             beforeSend : function() {
-                console.log('go');
+                console.log(dt);
             },
             complete : function() {
                 console.log('complete');
@@ -256,13 +275,88 @@ function requestPostInModal() {
             success : function(data) {
                 $(idt).html(data);
                 scrollBarConfig();
+                requestPostContent();
+                requestPnPost();
+                requestArchiveAuthor();
+                $(document).foundation();
                 //deleteCarateres('.locality',ind,2);
+            },
+            error : function(e) {
+                alert('Erro ' + e.status + '\nTente novamente.');
             }
         });
     });
 };
 requestPostInModal();
 
+function requestPnPost() {
+    $('a[data-getpnpost]').on('click',function(e) {
+        e.preventDefault();
+
+        var dt = $(this).data('pnpost');
+        //console.log(dt);
+
+            $.ajax({
+                data : {
+                    action : 'request_pnpost',
+                    pn_id : dt
+                },
+                beforeSend : function() {
+                    //console.log(dt);
+                    $('.thought-row').fadeOut('fast');
+                    $('figure.load-post').fadeIn('fast');
+                },
+                complete : function() {
+                    //console.log('complete');
+                    $('figure.load-post').fadeOut('fast');
+                    $('.thought-row').fadeIn('fast');
+                },
+                success : function(data) {
+                    //consolo.log(data);
+                    $('.thought-row').html(data);
+                    scrollBarConfig();
+                    requestPostContent();
+                    requestPnPost();
+                    $(document).foundation();
+                }
+            });
+    });
+};
+requestPnPost();
+
+function requestArchiveAuthor() {
+    //$('#select-author').change(function() {
+        //var field_value = $(this).val();
+
+        //$.ajax({
+            //data : {
+                //action : 'request_article_list',
+                //field_value : field_value
+            //}
+        //});
+    //});
+};
+//requestArchiveAuthor();
+
+
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=764603613569479";
+    fjs.parentNode.insertBefore(js, fjs);
+} (document, 'script', 'facebook-jssdk'));
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
+$(document).ajaxComplete(function(){
+    try{
+        FB.XFBML.parse(); 
+    }catch(ex){}
+
+    twttr.widgets.load();
+});
 
 /*function thoughtColors() {
 	var count = $('.this-thought').length;
@@ -371,7 +465,7 @@ function requestPostContent() {
 		});
 	});
 };
-requestPostContent();
+requestPostContent(); 
 
 
 // Foundation JavaScript

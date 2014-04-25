@@ -38,6 +38,13 @@
 	h1 {
 		margin: 0;
 	}
+
+	a {
+		color: $black;
+		&:hover {
+			color: $black;
+		}	
+	}
 }
 
 .post-tags {
@@ -134,8 +141,8 @@
 
 .article-text {
 	width: rem-calc(560);
-	height: rem-calc(300);
-	top: rem-calc(300);
+	height: rem-calc(400);
+	top: rem-calc(260);
 	overflow: hidden;
 
 	p {
