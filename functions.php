@@ -108,6 +108,24 @@ function get_single_term($post_id, $taxonomy)
     }
 }
 
+function get_meta_values( $key = '', $type = 'post', $status = 'publish' ) {
+
+    global $wpdb;
+
+    if( empty( $key ) )
+        return;
+
+    $r = $wpdb->get_col( $wpdb->prepare( "
+        SELECT pm.meta_value FROM {$wpdb->postmeta} pm
+        LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
+        WHERE pm.meta_key = '%s' 
+        AND p.post_status = '%s' 
+        AND p.post_type = '%s'
+    ", $key, $status, $type ) );
+
+    return $r;
+}
+
 /**
  * Agrupar posts por custom field
  * http://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters
@@ -126,5 +144,20 @@ require_once ( get_stylesheet_directory() . '/post-types/projetos.php' );
 //Pensadouro
 require_once ( get_stylesheet_directory() . '/post-types/pensadouro.php' );
 
+/**
+ * Search's
+ */
+
+//Artigos
+require_once ( get_stylesheet_directory() . '/includes/artigos-search.php' );
+
+//Busca
+require_once ( get_stylesheet_directory() . '/includes/search-query.php' );
+
+//Contatos
+//require_once ( get_stylesheet_directory() . '/includes/contact-form.php' );
+
+//Parceiros
+require_once ( get_stylesheet_directory() . '/includes/friends-list.php' );
 
 ?>

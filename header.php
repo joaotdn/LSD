@@ -37,7 +37,7 @@
                             <?php $page = get_page_by_title('Oportunidades'); ?>
                             <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>">Oportunidades</a></li>
                             <?php $page = get_page_by_title('Parceiros'); ?>
-                            <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>">Parceiros</a></li>
+                            <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>" data-reveal-id="friends-modal" data-reveal>Parceiros</a></li>
                             <?php $page = get_page_by_title('Visita Virtual'); ?>
                             <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>">Visita Virtual</a></li>
                         </ul>
@@ -48,8 +48,8 @@
                     <li><h4><a href="#" title="" class="get-category-timeline" data-categoryid="<?php echo $category_id; ?>">Projetos</a></h4></li>
                     <?php $category_id = get_cat_ID( 'Pensadouro' ); ?>
                     <li><h4><a href="#" title="" class="get-category-timeline" data-categoryid="<?php echo $category_id; ?>">Pensadouro</a></h4></li>
-                    <?php $page = get_page_by_title('Visita Virtual'); ?>
-                    <li><h4><a href="#" title="" data-pageid="<?php echo $page->ID; ?>">Contatos</a></h4></li>
+                    <?php $page = get_page_by_title('Contato'); ?>
+                    <li><h4><a href="#" title="" data-pageid="<?php echo $page->ID; ?>" data-reveal-id="contact-modal" data-reveal>Contatos</a></h4></li>
                 </ul>
             </nav>
         </div><!-- //row -->

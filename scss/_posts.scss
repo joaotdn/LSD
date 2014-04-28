@@ -25,8 +25,13 @@
 
 		h1 {
 			font-size: rem-calc(90);
-			font-style: italic;
+			//font-style: italic;
 			margin-left: rem-calc(30);
+
+			&.ct {
+				font-size: rem-calc(82);
+				margin-left: 0;
+			}
 		}
 	}
 
@@ -37,6 +42,13 @@
 
 	h1 {
 		margin: 0;
+	}
+
+	a {
+		color: $black;
+		&:hover {
+			color: $black;
+		}	
 	}
 }
 
@@ -73,6 +85,11 @@
 	p {
 		@extend %font-regular;
 		@extend %font-14;
+
+		&.font-lite {
+			@extend %font-lite;
+			font-size: 18;
+		}
 	}
 }
 
@@ -141,4 +158,34 @@
 	p {
 		padding-right: rem-calc(20);
 	}
+}
+
+//Pagina de contato
+.contact-info {
+	h4 {
+		font-size: rem-calc(18);
+		&.font-bold {
+			line-height: 1;
+		}
+	}
+}
+
+.ct-form {
+	margin-top: rem-calc(20);
+}
+
+.wpcf7-text, .wpcf7-textarea {
+	width: 50% !important;
+	background: $gold !important;
+}
+
+.wpcf7-textarea {
+	height: rem-calc(100) !important;
+}
+
+.wpcf7-submit {
+	@extend %font-lite;
+	background: $gold;
+	border: none;
+	font-size: rem-calc(14) !important;
 }

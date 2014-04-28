@@ -3,4 +3,5 @@
 *.DS_Store
 /stylesheets/*
 /sprites/*
+/node_modules/*
 

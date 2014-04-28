@@ -1,13 +1,9 @@
 <?php get_header(); ?>
-    
-    <div class="menu-options">
-        
-    </div>
 
     <div class="h-timeline">
 
         <figure class="loading">
-            <img src="images/loading.gif" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/loading.gif" alt="">
         </figure>
 
         <div class="options-menu small-4">

@@ -4,176 +4,63 @@
 
     <div id="article-modal" class="reveal-modal" data-reveal></div><!-- //article-modal -->
 
-    <div id="article-page-modal" class="reveal-modal" data-reveal>
-            <section class="select-options abs">
-                <header class="small-18 left text-center">
-                    <h1 class="text-upp font-bold">Artigos</h1>
+    <div id="thought-modal" class="reveal-modal" data-reveal></div><!-- //thought-modal -->
+
+    <div id="article-page-modal" class="reveal-modal" data-reveal></div><!-- //article-page-modal -->
+
+    <div id="friends-modal" class="reveal-modal" data-reveal></div><!-- //parceiros-modal -->
+
+    <div id="contact-modal" class="reveal-modal" data-reveal>
+        <div class="row">
+            <div class="abs post-thumb">
+                <header class="post-header abs article">
+                    <h1 class="text-upp font-lite full-width left text-center ct">Contato</h1>
                 </header>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3958.2250665842153!2d-35.907427999999996!3d-7.215147999999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aea086d4a53101%3A0xf4804c28cbee4489!2sUniversidade+Federal+de+Campina+Grande+-+Ufcg!5e0!3m2!1spt-BR!2sbr!4v1398636098077" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+            </div>
 
-                <form action="" class="article-options">
-                    <div class="row">
-                        <div class="small-16 small-push-1">
-                            <h3 class="text-upp white font-bold full-width left">Por autor</h3>
-                            <select name="select-author" id="select-author" class="small-18 columns">
-                                <option value="joao-faissal">João Faissal</option>
-                                <option value="joao-teodoro">João Teodoro</option>
-                                <option value="max-josino">Max Josino</option>
-                                <option value="rafael-mangueira">Rafael Mangueira</option>
-                            </select>
+            <article class="left post-content rel">
+                <hgroup class="contact-info">
+                    <div class="info-left">
+                        <h4 class="font-lite full-width left">Telefone/Fax</h4>
+                        <h4 class="font-bold full-width left">+55 83 2101 1365</h4>
 
-                            <h3 class="text-upp white font-bold full-width left">Por ano</h3>
-                            <select name="select-author" id="select-author" class="small-18 columns">
-                                <option value="2014">2014</option>
-                                <option value="2013">2013</option>
-                                <option value="2012">2012</option>
-                                <option value="2011">2011</option>
-                            </select>
-
-                            <h3 class="text-upp white font-bold full-width left">Por tag</h3>
-                            <nav class="article-tags">
-                                <ul class="no-bullet small-6 columns">
-                                    <li><a href="">Clipping</a></li>
-                                    <li><a href="">Equipe</a></li>
-                                    <li><a href="">LSD4ever</a></li>
-                                    <li><a href="">Oportunidades</a></li>
-                                    <li><a href="">Parceiros</a></li>
-                                </ul>
-                                <ul class="no-bullet small-6 columns">
-                                    <li><a href="">Clipping</a></li>
-                                    <li><a href="">Equipe</a></li>
-                                    <li><a href="">LSD4ever</a></li>
-                                    <li><a href="">Oportunidades</a></li>
-                                    <li><a href="">Parceiros</a></li>
-                                </ul>
-                                <ul class="no-bullet small-6 columns">
-                                    <li><a href="">Clipping</a></li>
-                                    <li><a href="">Equipe</a></li>
-                                    <li><a href="">LSD4ever</a></li>
-                                    <li><a href="">Oportunidades</a></li>
-                                    <li><a href="">Parceiros</a></li>
-                                </ul>
-                            </nav>
-                        </div>
+                        <h4 class="font-lite full-width left">E-mail</h4>
+                        <h4 class="font-bold full-width left">info@lsd.ufcg.edu.br</h4>
                     </div>
-                </form>
-            </section><!-- //select-options -->
-
-            <nav class="article-list abs">
-                <ul class="no-bullet full-width left">
-                    <li>
-                        <span class="full-width left text-upp red font-12 font-bold"><time>2014</time> <a href="#" class="article-pdf black" style="margin-left:10px;">Download PDF</a></span>
-                        <h4 class="full-width left font-lite">
-                            <a href="#" title="" class="black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, laudantium accusantium</a>
-                        </h4>
-                        <p class="article-authors font-bold">por <a href="">Joao Teodoro, Max Josino</a></p>
-                        <p class="locality text-italic">J. Braz. Comp. Soc. 20(1): 1-16 (2014)</p>
-                        <p class="categories text-app">P2P / PARCEIROS / VISITA VIRTUAL</p>
-                    </li>
-
-                    <li>
-                        <span class="full-width left text-upp red font-12 font-bold"><time>2014</time> <a href="#" class="article-pdf black" style="margin-left:10px;">Download PDF</a></span>
-                        <h4 class="full-width left font-lite">
-                            <a href="#" title="" class="black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, laudantium accusantium</a>
-                        </h4>
-                        <p class="article-authors font-bold">por <a href="">Joao Teodoro, Max Josino</a></p>
-                        <p class="locality text-italic">J. Braz. Comp. Soc. 20(1): 1-16 (2014)</p>
-                        <p class="categories text-app">P2P / PARCEIROS / VISITA VIRTUAL</p>
-                    </li>
-
-                    <li>
-                        <span class="full-width left text-upp red font-12 font-bold"><time>2014</time> <a href="#" class="article-pdf black" style="margin-left:10px;">Download PDF</a></span>
-                        <h4 class="full-width left font-lite">
-                            <a href="#" title="" class="black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, laudantium accusantium</a>
-                        </h4>
-                        <p class="article-authors font-bold">por <a href="">Joao Teodoro, Max Josino</a></p>
-                        <p class="locality text-italic">J. Braz. Comp. Soc. 20(1): 1-16 (2014)</p>
-                        <p class="categories text-app">P2P / PARCEIROS / VISITA VIRTUAL</p>
-                    </li>
-
-                    <li>
-                        <span class="full-width left text-upp red font-12 font-bold"><time>2014</time> <a href="#" class="article-pdf black" style="margin-left:10px;">Download PDF</a></span>
-                        <h4 class="full-width left font-lite">
-                            <a href="#" title="" class="black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, laudantium accusantium</a>
-                        </h4>
-                        <p class="article-authors font-bold">por <a href="">Joao Teodoro, Max Josino</a></p>
-                        <p class="locality text-italic">J. Braz. Comp. Soc. 20(1): 1-16 (2014)</p>
-                        <p class="categories text-app">P2P / PARCEIROS / VISITA VIRTUAL</p>
-                    </li>
-
-                    <li>
-                        <span class="full-width left text-upp red font-12 font-bold"><time>2014</time> <a href="#" class="article-pdf black" style="margin-left:10px;">Download PDF</a></span>
-                        <h4 class="full-width left font-lite">
-                            <a href="#" title="" class="black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, laudantium accusantium</a>
-                        </h4>
-                        <p class="article-authors font-bold">por <a href="">Joao Teodoro, Max Josino</a></p>
-                        <p class="locality text-italic">J. Braz. Comp. Soc. 20(1): 1-16 (2014)</p>
-                        <p class="categories text-app">P2P / PARCEIROS / VISITA VIRTUAL</p>
-                    </li>
-
-                    <li>
-                        <span class="full-width left text-upp red font-12 font-bold"><time>2014</time> <a href="#" class="article-pdf black" style="margin-left:10px;">Download PDF</a></span>
-                        <h4 class="full-width left font-lite">
-                            <a href="#" title="" class="black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, laudantium accusantium</a>
-                        </h4>
-                        <p class="article-authors font-bold">por <a href="">Joao Teodoro, Max Josino</a></p>
-                        <p class="locality text-italic">J. Braz. Comp. Soc. 20(1): 1-16 (2014)</p>
-                        <p class="categories text-app">P2P / PARCEIROS / VISITA VIRTUAL</p>
-                    </li>
-                </ul>
-            </nav>
-            <a class="close-reveal-modal">&#215;</a>
-        </div><!-- //article-page-modal -->
-
-        <div id="thought-modal" class="reveal-modal" data-reveal>
-            <div class="row">
-                <header class="thought-header abs">
-                    <nav class="thought-nav right">
-                        <a href="#" class="thought-prev display-block white left text-center font-14" title="">
-                            <div class="icon-prev-post left"></div>
-                            <span class="text-upp display-block">Post anterior</span>
-                        </a>
-                        <a href="#" class="thought-next display-block white right text-center font-14" title="">
-                            <div class="icon-next-post right"></div>
-                            <span class="text-upp display-block">Próximo post</span>
-                        </a>
-                    </nav>
-
-                    <div class="the-thought right">
-                        <h1 class="text-upp">o<span>pen</span>s</h1>
-                        <h1 class="text-upp">en<span>sad</span></h1>
-                        <h1 class="text-upp">d<span>our</span>o</h1>
-                        <h1 class="text-upp">u<span>ro</span>pe</h1>
+                    
+                    <div class="info-left">
+                        <h4 class="font-lite full-width left">Endereço</h4>
+                        <h4 class="font-bold full-width left">Av. Aprígio Veloso, 882</h4>
+                        <h4 class="font-bold full-width left">Campina Grande</h4>
+                        <h4 class="font-bold full-width left">Paraíba, Brasil</h4>
                     </div>
-                </header>
+                </hgroup>
 
-                <article class="thought-post abs">
-                    <figure class="thought-thumb full-width-left" style="background-image:url(midias/thumb-2.jpg);"></figure>
+                <section class="ct-form left full-width">
+                    <?php echo do_shortcode('[contact-form-7 id="826" title="Formulário de contato"]'); ?>  
+                </section>
+            </article>
+        </div><!-- //row -->
+        <a class="close-reveal-modal">&#215;</a>
+    </div><!-- //contatos -->
 
-                    <section class="thought-content full-width left">
-                        <header class="full-width left blog-header">
-                            <time class="text-upp">27 de Setembro de 2012</time>
-                            <h3 class="font-bold left full-width">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, tempora, saepe.</h3>
-                            <div class="share-thought left full-width">
-                                
-                            </div>
-                        </header>
+    <div id="search-modal" class="reveal-modal" data-reveal>
+            <nav class="list-team left rel">
+            <header class="search-header full-width left">
+                <h2 class="font-bold text-upp">Buscar</h2>
+            </header>
 
-                        <div class="thought-text abs">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, odit, laudantium, commodi voluptatibus quis architecto minima temporibus autem repellat sapiente est dolorum impedit atque aperiam numquam quo dicta consequuntur sed?</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, odit, laudantium, commodi voluptatibus quis architecto minima temporibus autem repellat sapiente est dolorum impedit atque aperiam numquam quo dicta consequuntur sed?</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, odit, laudantium, commodi voluptatibus quis architecto minima temporibus autem repellat sapiente est dolorum impedit atque aperiam numquam quo dicta consequuntur sed?</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, odit, laudantium, commodi voluptatibus quis architecto minima temporibus autem repellat sapiente est dolorum impedit atque aperiam numquam quo dicta consequuntur sed?</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, odit, laudantium, commodi voluptatibus quis architecto minima temporibus autem repellat sapiente est dolorum impedit atque aperiam numquam quo dicta consequuntur sed?</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, odit, laudantium, commodi voluptatibus quis architecto minima temporibus autem repellat sapiente est dolorum impedit atque aperiam numquam quo dicta consequuntur sed?</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, odit, laudantium, commodi voluptatibus quis architecto minima temporibus autem repellat sapiente est dolorum impedit atque aperiam numquam quo dicta consequuntur sed?</p>
-                        </div>
-                    </section>
-                </article>
-            </div><!-- //row -->
-            <a class="close-reveal-modal">&#215;</a>
-        </div><!-- //thought-modal -->
+            <form action="" class="search-form">
+                <label for=""><input type="text" id="search-field" name="search-field"></label>
+            </form>
+
+            <section class="search-result full-width abs">
+            </section>
+        </nav>
+    <a class="close-reveal-modal">&#215;</a>
+    </div><!-- //Search modal -->
         
-
         <div id="team-modal" class="reveal-modal" data-reveal>
             <nav class="list-team left rel">
                 <header class="full-width left text-center">
@@ -274,144 +161,7 @@
             <a class="close-reveal-modal">&#215;</a>
         </div><!-- //Equipe modal -->
 
-        <div id="search-modal" class="reveal-modal" data-reveal>
-            <nav class="list-team left rel">
-                <header class="search-header full-width left">
-                    <h2 class="font-bold text-upp">Buscar</h2>
-                </header>
-
-                <form action="" class="search-form">
-                    <label for=""><input type="text"></label>
-                </form>
-
-                <section class="search-result full-width abs">
-                    <h6 class="font-lite text-upp full-width left bd">Resultados</h6>
-
-                    <ul class="no-bullet full-width left">
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <h6 class="font-lite text-upp full-width left"><a href="" class="black">Artigos / Clipping</a></h6>
-                            <p class="full-width left">
-                                <a href="#" title="" class="black font-lite font-14">
-                                    <span class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
-                                    <span class="icon-go left display-block"></span>
-                                </a>
-                            </p>
-                        </li>
-                    </ul>
-                </section>
-            </nav>
-            <a class="close-reveal-modal">&#215;</a>
-        </div><!-- //Search modal -->
+        
 
         <div id="english-page-modal" class="reveal-modal" data-reveal>
             <div class="row">
@@ -526,8 +276,9 @@
       }
       //]]>
     </script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+
+    <?php wp_footer(); ?>
+
     <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
     <script>
         $(document).ready(function() {
@@ -539,7 +290,5 @@
 
         });
     </script>
-
-    <?php wp_footer(); ?>
 </body>
 </html>

@@ -80,7 +80,7 @@ function request_project() {
         <div class="abs post-thumb" style="background-image: url(<?php echo $thumb; ?>);">
             <header class="post-header abs">
                 <p class="text-upp font-lite">Projetos</p>
-                <h1 class="text-upp"><?php echo get_single_term($article_id, 'projetos_categorias'); ?></h1>
+                <h1 class="text-upp font-lite"><?php echo get_single_term($article_id, 'projetos_categorias'); ?></h1>
             </header>
         </div><!-- post-thumb -->
         
