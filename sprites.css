@@ -1,42 +1,48 @@
 .icon-go {
   background-image: url(images/spritesheet.png);
-  background-position: -203px -146px;
+  background-position: -291px -186px;
   width: 13px;
   height: 9px;
 }
 .icon-lock {
   background-image: url(images/spritesheet.png);
-  background-position: -195px -132px;
+  background-position: -261px -186px;
   width: 10px;
   height: 12px;
 }
 .icon-logo {
   background-image: url(images/spritesheet.png);
-  background-position: 0px 0px;
+  background-position: 0px -186px;
   width: 183px;
   height: 160px;
 }
+.icon-lsd {
+  background-image: url(images/spritesheet.png);
+  background-position: 0px 0px;
+  width: 478px;
+  height: 186px;
+}
 .icon-next-post {
   background-image: url(images/spritesheet.png);
-  background-position: -183px 0px;
+  background-position: -183px -186px;
   width: 33px;
   height: 66px;
 }
 .icon-prev-post {
   background-image: url(images/spritesheet.png);
-  background-position: -183px -66px;
+  background-position: -216px -186px;
   width: 33px;
   height: 66px;
 }
 .icon-search {
   background-image: url(images/spritesheet.png);
-  background-position: -183px -132px;
+  background-position: -249px -186px;
   width: 12px;
   height: 14px;
 }
 .icon-usa {
   background-image: url(images/spritesheet.png);
-  background-position: -183px -146px;
+  background-position: -271px -186px;
   width: 20px;
   height: 11px;
 }

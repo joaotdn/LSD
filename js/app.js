@@ -12,7 +12,7 @@ $.ajaxSetup({
 });
 
 function scrollBarConfig() {
-$('.post-text, .article-text, .article-list, .thought-post, .group-list, .search-result, .english-text, .friends-list').perfectScrollbar({
+$('.post-text, .article-text, .article-list, .thought-post, .group-list, .search-result, .english-text, .friends-list, .oportunity-text').perfectScrollbar({
     wheelSpeed: 20,
     wheelPropagation: false,
     suppressScrollX: true
@@ -126,7 +126,7 @@ projectsTitles();
 /**
  * Get category page with ajax
  * @return {html}
- */
+
 function getCategory() {
     $('.get-category-timeline').on('click', function(e) {
         e.preventDefault();
@@ -160,7 +160,9 @@ function getCategory() {
         });
     })
 };
-getCategory();
+ */
+
+//getCategory();
 
 
 function categoryPostsTL() {
@@ -237,8 +239,8 @@ function categoryPostsTL() {
 };
 
 
-function requestPostInModal() {
-    $('a[data-reveal]').on('click',function() {
+
+$(document).on('click','a[data-reveal]',function() {
         var dt      = $(this).data('reveal-id'),
             modalid = $(this).parents('article').data('modalid');
 
@@ -269,6 +271,21 @@ function requestPostInModal() {
             var action = 'request_friends_list',
                 idt    = '#friends-modal';
             break;
+
+            case 'oportunity-modal' :
+            var action = 'request_oportunity',
+                idt    = '#oportunity-modal';
+            break;
+
+            case 'team-modal' :
+            var action = 'request_team',
+                idt    = '#team-modal';
+            break;
+
+            case 'teamever-modal' :
+            var action = 'request_team_for_ever',
+                idt    = '#teamever-modal';
+            break;
         }
 
         $.ajax({
@@ -286,30 +303,25 @@ function requestPostInModal() {
             },
             success : function(data) {
                 $(idt).html(data);
+                $(document).foundation();
+
                 scrollBarConfig();
                 requestPostContent();
-                requestPnPost();
-                requestPostInModal();
-                requestFormContent('#select-year','article_year');
                 
                 requestAuthorTag('#select-author','autores');
                 requestAuthorTag('.article-authors a','autores');
                 
                 requestAuthorTag('.tag-li','tags');
-                requestAuthorTag('.text-app a','tags');
-
-                $(document).foundation();
+                requestAuthorTag('.text-app a','tags');     
             },
             error : function(e) {
                 alert('Erro ' + e.status + '\nTente novamente.');
             }
         });
-    });
-};
-requestPostInModal();
+});
 
-function requestPnPost() {
-    $('a[data-getpnpost]').on('click',function(e) {
+
+$(document).on('click','a[data-getpnpost]',function(e) {
         e.preventDefault();
 
         var dt = $(this).data('pnpost');
@@ -337,23 +349,20 @@ function requestPnPost() {
                     $('.thought-row').html(data);
                     scrollBarConfig();
                     requestPostContent();
-                    requestPnPost();
                     $(document).foundation();
                 }
             });
-    });
-};
-requestPnPost();
+});
 
-function requestFormContent(node,key) {
-    $(node).change(function() {
-        var field_value = $(node + ' option:selected').text();
+
+$(document).on('change','#select-year', function() {
+        var field_value = $('#select-year' + ' option:selected').text();
 
         $.ajax({
             data : {
                 action : 'request_article_list_query',
                 field_value : field_value,
-                key : key
+                key : 'article_year'
             },
             beforeSend : function() {
                 $('.article-list').fadeOut('fast');
@@ -368,8 +377,7 @@ function requestFormContent(node,key) {
                 //console.log(data);
             }
         });
-    });
-};
+});
 
 function requestAuthorTag(node,taxonomy) {
     if(node == '#select-author') {
@@ -377,6 +385,7 @@ function requestAuthorTag(node,taxonomy) {
     } else {
         var event = 'click';
     }
+
     $(node).bind(event, function(e) {
         e.preventDefault();
 

@@ -169,6 +169,7 @@ a {
 	.sub-menu {
 		a {
 			@extend %font-lite;
+			font-size: rem-calc(14) !important;	
 		}
 
 		ul {
@@ -179,7 +180,7 @@ a {
 
 .sub-menu {
 	margin-left: 0 !important;
-	margin-bottom: rem-calc(10);
+	margin-bottom: rem-calc(10) !important;
 }
 
 /**
@@ -347,6 +348,43 @@ a {
 
 	h4 {
 		border-bottom: 3px solid $pink;
+	}
+}
+
+//Oportunidades
+.opt-header {
+	width: rem-calc(444);
+	float: left;
+	margin: rem-calc(140) 0 0 rem-calc(300);
+	padding: rem-calc(20);
+
+	h1 {
+		font-size: rem-calc(80);
+		line-height: .8;
+		letter-spacing: .2em;
+	}
+}
+
+.icon-lsd {
+	top: rem-calc(524.3);
+	left: rem-calc(250);
+}
+
+.oportunity-text {
+	width: rem-calc(400);
+	height: 75%;
+	overflow: hidden;
+	top: rem-calc(150);
+	left: rem-calc(744);
+
+	p {
+		@extend %font-regular;
+		padding-right: rem-calc(20);
+	}
+
+	h3 {
+		padding-right: rem-calc(20);
+
 	}
 }
 

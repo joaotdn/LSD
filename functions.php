@@ -160,4 +160,13 @@ require_once ( get_stylesheet_directory() . '/includes/search-query.php' );
 //Parceiros
 require_once ( get_stylesheet_directory() . '/includes/friends-list.php' );
 
+//Oportunidades
+require_once ( get_stylesheet_directory() . '/includes/oportunity.php' );
+
+//Equipe
+require_once ( get_stylesheet_directory() . '/includes/team.php' );
+
+//LSD4ever
+require_once ( get_stylesheet_directory() . '/includes/team-4ever.php' );
+
 ?>

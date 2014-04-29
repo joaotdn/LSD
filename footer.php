@@ -9,6 +9,12 @@
     <div id="article-page-modal" class="reveal-modal" data-reveal></div><!-- //article-page-modal -->
 
     <div id="friends-modal" class="reveal-modal" data-reveal></div><!-- //parceiros-modal -->
+    
+    <div id="oportunity-modal" class="reveal-modal" data-reveal></div><!-- //oportunity-modal -->
+
+    <div id="team-modal" class="reveal-modal" data-reveal></div><!-- //Equipe modal -->
+
+    <div id="teamever-modal" class="reveal-modal" data-reveal></div><!-- //Equipe modal -->
 
     <div id="contact-modal" class="reveal-modal" data-reveal>
         <div class="row">
@@ -61,105 +67,6 @@
     <a class="close-reveal-modal">&#215;</a>
     </div><!-- //Search modal -->
         
-        <div id="team-modal" class="reveal-modal" data-reveal>
-            <nav class="list-team left rel">
-                <header class="full-width left text-center">
-                    <h1 class="font-lite text-italic text-upp">Equipe</h1>
-                </header>
-                <div class="group-list full-width abs">
-                    <ul class="small-block-grid-4">
-                        <li>
-                            <figure>
-                                <img src="midias/team.jpg" alt="">
-                                <figcaption class="text-center">
-                                    <p class="text-upp font-lite">Coordenador</p>
-                                    <p class="name">Francisco Vilar Brasileiro</p>
-                                    <span class="email font-lite">fubica@dsc.ufcg.com.br</span>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure>
-                                <img src="midias/team.jpg" alt="">
-                                <figcaption class="text-center">
-                                    <p class="text-upp font-lite">Coordenador</p>
-                                    <p class="name">Francisco Vilar Brasileiro</p>
-                                    <span class="email font-lite">fubica@dsc.ufcg.com.br</span>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure>
-                                <img src="midias/team.jpg" alt="">
-                                <figcaption class="text-center">
-                                    <p class="text-upp font-lite">Coordenador</p>
-                                    <p class="name">Francisco Vilar Brasileiro</p>
-                                    <span class="email font-lite">fubica@dsc.ufcg.com.br</span>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure>
-                                <img src="midias/team.jpg" alt="">
-                                <figcaption class="text-center">
-                                    <p class="text-upp font-lite">Coordenador</p>
-                                    <p class="name">Francisco Vilar Brasileiro</p>
-                                    <span class="email font-lite">fubica@dsc.ufcg.com.br</span>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure>
-                                <img src="midias/team.jpg" alt="">
-                                <figcaption class="text-center">
-                                    <p class="text-upp font-lite">Coordenador</p>
-                                    <p class="name">Francisco Vilar Brasileiro</p>
-                                    <span class="email font-lite">fubica@dsc.ufcg.com.br</span>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure>
-                                <img src="midias/team.jpg" alt="">
-                                <figcaption class="text-center">
-                                    <p class="text-upp font-lite">Coordenador</p>
-                                    <p class="name">Francisco Vilar Brasileiro</p>
-                                    <span class="email font-lite">fubica@dsc.ufcg.com.br</span>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure>
-                                <img src="midias/team.jpg" alt="">
-                                <figcaption class="text-center">
-                                    <p class="text-upp font-lite">Coordenador</p>
-                                    <p class="name">Francisco Vilar Brasileiro</p>
-                                    <span class="email font-lite">fubica@dsc.ufcg.com.br</span>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure>
-                                <img src="midias/team.jpg" alt="">
-                                <figcaption class="text-center">
-                                    <p class="text-upp font-lite">Coordenador</p>
-                                    <p class="name">Francisco Vilar Brasileiro</p>
-                                    <span class="email font-lite">fubica@dsc.ufcg.com.br</span>
-                                </figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <a class="close-reveal-modal">&#215;</a>
-        </div><!-- //Equipe modal -->
 
         
 
@@ -290,5 +197,6 @@
 
         });
     </script>
+    <div id="fb-root"></div>
 </body>
 </html>

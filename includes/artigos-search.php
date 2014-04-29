@@ -71,7 +71,7 @@ function request_article_search() {
                 <article data-modalid="<?php echo returnId(); ?>">
 
                 <span class="full-width left text-upp red font-12 font-bold">
-                    <?php $year = get_field('article_year', $article_id); ?>
+                    <?php $year = get_field('article_year'); ?>
                     <time><?php echo $year; ?></time>
                     <?php 
                         $pdf = get_field('article_pdf'); 
@@ -83,7 +83,7 @@ function request_article_search() {
                 <h4 class="full-width left font-lite">
                     <a href="#" title="<?php the_title(); ?>" class="black" data-reveal-id="article-modal" data-reveal><?php the_title(); ?></a>
                 </h4>
-                <?php $author_slug = get_term( $term, $taxonomy, $output, $filter ); ?>
+                
                 <p class="article-authors font-bold">por <?php echo get_the_term_list( $post->ID, 'autores', '<span class="author-slug" value="">', ' ,', '</span>' ); ?></p>
                 <p class="locality text-italic">
                     <?php 
@@ -137,7 +137,7 @@ function request_article_list_query() {
             <article data-modalid="<?php echo returnId(); ?>">
 
             <span class="full-width left text-upp red font-12 font-bold">
-                <?php $year = get_field('article_year', $article_id); ?>
+                <?php $year = get_field('article_year'); ?>
                 <time><?php echo $year; ?></time>
                 <?php 
                     $pdf = get_field('article_pdf'); 
@@ -199,7 +199,7 @@ function request_article_list_tags() {
             <article data-modalid="<?php echo returnId(); ?>">
 
             <span class="full-width left text-upp red font-12 font-bold">
-                <?php $year = get_field('article_year', $article_id); ?>
+                <?php $year = get_field('article_year'); ?>
                 <time><?php echo $year; ?></time>
                 <?php 
                     $pdf = get_field('article_pdf'); 

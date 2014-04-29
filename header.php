@@ -33,9 +33,9 @@
                             <?php $page = get_page_by_title('Equipe'); ?>
                             <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>" data-reveal-id="team-modal" data-reveal>Equipe</a></li>
                             <?php $page = get_page_by_title('LSD4ever'); ?>
-                            <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>">LSD4ever</a></li>
+                            <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>" data-reveal-id="teamever-modal" data-reveal>LSD4ever</a></li>
                             <?php $page = get_page_by_title('Oportunidades'); ?>
-                            <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>">Oportunidades</a></li>
+                            <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>" data-reveal-id="oportunity-modal" data-reveal>Oportunidades</a></li>
                             <?php $page = get_page_by_title('Parceiros'); ?>
                             <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>" data-reveal-id="friends-modal" data-reveal>Parceiros</a></li>
                             <?php $page = get_page_by_title('Visita Virtual'); ?>
