@@ -15,10 +15,18 @@
 }
 
 .group-list {
-	height: 400px;
-	bottom: 20px;
+	height: 150%;
+	top: rem-calc(160);
 	left: rem-calc(20);
 	overflow: hidden;
+
+	&.for-ever {
+		top: rem-calc(180);
+	}
+
+	figure {
+		text-align: center;
+	}
 
 	p {
 		font-size: rem-calc(14);
@@ -28,14 +36,28 @@
 			color: $pink;
 		}
 	}
+
 	span {
 		font-size: rem-calc(12);
 	}
 
-	img {
+	.member-thumb {
 		@include border-radius(50%);
+		width: 200px;
+		height: 200px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0 auto;
+		margin-bottom: rem-calc(10);
 	}
+
 	ul {
 		padding-right: rem-calc(20);
 	}
+}
+
+.for-ever-title {
+	font-size: rem-calc(80) !important;
+	line-height: .9 !important;
 }

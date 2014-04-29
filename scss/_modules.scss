@@ -43,6 +43,11 @@ select {
 a {
 	@extend %transition-color;
 }
+
+.ui-autocomplete {
+	z-index: 999999;
+	position: fixed !important;
+}
 /**
  * Utility classes
  */
@@ -164,6 +169,7 @@ a {
 	.sub-menu {
 		a {
 			@extend %font-lite;
+			font-size: rem-calc(14) !important;	
 		}
 
 		ul {
@@ -174,7 +180,7 @@ a {
 
 .sub-menu {
 	margin-left: 0 !important;
-	margin-bottom: rem-calc(10);
+	margin-bottom: rem-calc(10) !important;
 }
 
 /**
@@ -318,6 +324,90 @@ a {
 		margin: 0;
 	}
 }
+
+//Parceiros
+.friend-header {
+	width: rem-calc(600);
+	float: left;
+	margin: rem-calc(170) 0 0 rem-calc(300);
+	text-align: center;
+
+	h1 {
+		font-size: rem-calc(90);
+		text-decoration: underline;
+	}
+}
+
+.friends-list {
+	top: rem-calc(320);
+	left: rem-calc(300);
+	padding-left: rem-calc(20);
+	width: rem-calc(600);
+	height: 400px;
+	overflow: hidden;
+
+	h4 {
+		border-bottom: 3px solid $pink;
+	}
+}
+
+//Oportunidades
+.opt-header {
+	width: rem-calc(444);
+	float: left;
+	margin: rem-calc(140) 0 0 rem-calc(300);
+	padding: rem-calc(20);
+
+	h1 {
+		font-size: rem-calc(80);
+		line-height: .8;
+		letter-spacing: .2em;
+	}
+
+	&.clipp {
+		background: white;
+	}
+
+	h2 {
+		font-size: rem-calc(80);
+	}
+}
+
+.icon-lsd {
+	top: rem-calc(518);
+	left: rem-calc(250);
+}
+
+.oportunity-text {
+	width: rem-calc(400);
+	height: 75%;
+	overflow: hidden;
+	top: rem-calc(150);
+	left: rem-calc(744);
+
+	p {
+		@extend %font-regular;
+		padding-right: rem-calc(20);
+	}
+
+	h3 {
+		padding-right: rem-calc(20);
+
+	}
+}
+
+//Visita virtual
+.virtual-tour {
+	width: rem-calc(934);
+	margin: rem-calc(160) 0 0 rem-calc(320) !important;
+
+	h1 {
+		font-size: rem-calc(85);
+		color: $pink;
+	}
+}
+
+//Clipping
 
 
 

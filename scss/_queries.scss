@@ -5,6 +5,20 @@
 	.post-info {
 		margin-top: rem-calc(10);
 	}
+
+	.contact-info {
+		h4 {
+			font-size: rem-calc(14);
+		}
+	}
+	.info-left {
+		width: 50%;
+		float: left;
+	}
+	.info-left {
+		width: 50%;
+		float: right;
+	}
 }
 
 @media screen and (min-width: rem-calc(320)) and (max-width: rem-calc(1200)) {
@@ -22,6 +36,10 @@
 			h1 {
 				font-size: rem-calc(50);
 				margin-left: rem-calc(20);
+
+				&.ct {
+					font-size: rem-calc(20);
+				}
 			}
 		}
 	}

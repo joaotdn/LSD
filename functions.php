@@ -127,11 +127,6 @@ function get_meta_values( $key = '', $type = 'post', $status = 'publish' ) {
 }
 
 /**
- * Agrupar posts por custom field
- * http://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters
- */
-
-/**
  * Custom Post Types
  */
 
@@ -150,5 +145,32 @@ require_once ( get_stylesheet_directory() . '/post-types/pensadouro.php' );
 
 //Artigos
 require_once ( get_stylesheet_directory() . '/includes/artigos-search.php' );
+
+//Busca
+require_once ( get_stylesheet_directory() . '/includes/search-query.php' );
+
+//Contatos
+//require_once ( get_stylesheet_directory() . '/includes/contact-form.php' );
+
+//Parceiros
+require_once ( get_stylesheet_directory() . '/includes/friends-list.php' );
+
+//Oportunidades
+require_once ( get_stylesheet_directory() . '/includes/oportunity.php' );
+
+//Equipe
+require_once ( get_stylesheet_directory() . '/includes/team.php' );
+
+//LSD4ever
+require_once ( get_stylesheet_directory() . '/includes/team-4ever.php' );
+
+//Visita virtual
+require_once ( get_stylesheet_directory() . '/includes/tour.php' );
+
+//Clipping
+require_once ( get_stylesheet_directory() . '/includes/clipping.php' );
+
+//English
+require_once ( get_stylesheet_directory() . '/includes/english.php' );
 
 ?>

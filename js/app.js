@@ -12,13 +12,17 @@ $.ajaxSetup({
 });
 
 function scrollBarConfig() {
-$('.post-text, .article-text, .article-list, .thought-post, .group-list, .search-result, .english-text').perfectScrollbar({
+$('.post-text, .article-text, .article-list, .thought-post, .group-list, .search-result, .english-text, .friends-list, .oportunity-text').perfectScrollbar({
     wheelSpeed: 20,
     wheelPropagation: false,
     suppressScrollX: true
 });
 };
 scrollBarConfig();
+
+function eraseChar(node) {
+    $(node).text().slice(0, 1);
+};
 
 function adjustRowsTimeline(timeline) {
 	var num_rows = $(timeline,'.h-timeline').length,
@@ -53,6 +57,7 @@ $(window).bind('load resize' ,function(e) {
     otherHeight('.list-team',150);
     otherHeight('.group-list',320);
     otherHeight('.search-result',430);
+    otherHeight('.friends-list',260);
     
 });
 
@@ -121,7 +126,7 @@ projectsTitles();
 /**
  * Get category page with ajax
  * @return {html}
- */
+
 function getCategory() {
     $('.get-category-timeline').on('click', function(e) {
         e.preventDefault();
@@ -135,7 +140,7 @@ function getCategory() {
             dataType: 'html',
             type: 'GET',
             beforeSend : function() {
-                //console.log('go!');
+                ////console.log('go!');
                 $('.loading').fadeIn('fast');
                 $('.request-container').remove();
             },
@@ -150,12 +155,14 @@ function getCategory() {
                 adjustRowsTimeline('.category-timeline');
             },
             error: function(e) {
-                console.log(e.type);
+                //console.log(e.type);
             }
         });
     })
 };
-getCategory();
+ */
+
+//getCategory();
 
 
 function categoryPostsTL() {
@@ -232,12 +239,12 @@ function categoryPostsTL() {
 };
 
 
-function requestPostInModal() {
-    $('a[data-reveal]').on('click',function() {
+
+$(document).on('click','a[data-reveal]',function() {
         var dt      = $(this).data('reveal-id'),
             modalid = $(this).parents('article').data('modalid');
 
-        console.log(modalid);
+        //console.log(modalid);
 
         switch(dt) {
             case 'article-modal':
@@ -259,6 +266,41 @@ function requestPostInModal() {
             var action = 'request_article_search',
                 idt    = '#article-page-modal';
             break;
+
+            case 'friends-modal' :
+            var action = 'request_friends_list',
+                idt    = '#friends-modal';
+            break;
+
+            case 'oportunity-modal' :
+            var action = 'request_oportunity',
+                idt    = '#oportunity-modal';
+            break;
+
+            case 'team-modal' :
+            var action = 'request_team',
+                idt    = '#team-modal';
+            break;
+
+            case 'teamever-modal' :
+            var action = 'request_team_for_ever',
+                idt    = '#teamever-modal';
+            break;
+
+            case 'tour-modal' :
+            var action = 'request_tour',
+                idt    = '#tour-modal';
+            break;
+
+            case 'clipping-modal' :
+            var action = 'request_clipping',
+                idt    = '#clipping-modal';
+            break;
+
+            case 'english-page-modal' :
+            var action = 'request_english',
+                idt    = '#english-page-modal';
+            break;
         }
 
         $.ajax({
@@ -267,34 +309,38 @@ function requestPostInModal() {
                 modalid : modalid
             },
             beforeSend : function() {
-                console.log(dt);
+                //console.log(dt);
+                $('.loading').fadeIn('fast');
             },
             complete : function() {
-                console.log('complete');
+                //console.log('complete');
+                $('.loading').fadeOut('fast');
             },
             success : function(data) {
                 $(idt).html(data);
+                $(document).foundation();
+
                 scrollBarConfig();
                 requestPostContent();
-                requestPnPost();
-                requestArchiveAuthor();
-                $(document).foundation();
-                //deleteCarateres('.locality',ind,2);
+                
+                //requestAuthorTag('#select-author','autores');
+                //requestAuthorTag('.article-authors a','autores');
+                
+                //requestAuthorTag('.tag-li','tags');
+                //requestAuthorTag('.text-app a','tags');     
             },
             error : function(e) {
                 alert('Erro ' + e.status + '\nTente novamente.');
             }
         });
-    });
-};
-requestPostInModal();
+});
 
-function requestPnPost() {
-    $('a[data-getpnpost]').on('click',function(e) {
+
+$(document).on('click','a[data-getpnpost]',function(e) {
         e.preventDefault();
 
         var dt = $(this).data('pnpost');
-        //console.log(dt);
+        ////console.log(dt);
 
             $.ajax({
                 data : {
@@ -302,42 +348,115 @@ function requestPnPost() {
                     pn_id : dt
                 },
                 beforeSend : function() {
-                    //console.log(dt);
+                    ////console.log(dt);
                     $('.thought-row').fadeOut('fast');
                     $('figure.load-post').fadeIn('fast');
+                    $('.loading').fadeIn('fast');
                 },
                 complete : function() {
-                    //console.log('complete');
+                    ////console.log('complete');
                     $('figure.load-post').fadeOut('fast');
                     $('.thought-row').fadeIn('fast');
+                    $('.loading').fadeOut('fast');
                 },
                 success : function(data) {
                     //consolo.log(data);
                     $('.thought-row').html(data);
                     scrollBarConfig();
                     requestPostContent();
-                    requestPnPost();
                     $(document).foundation();
                 }
             });
+});
+
+
+$(document).on('change','#select-year', function() {
+        var field_value = $('#select-year' + ' option:selected').text();
+
+        $.ajax({
+            data : {
+                action : 'request_article_list_query',
+                field_value : field_value,
+                key : 'article_year'
+            },
+            beforeSend : function() {
+                $('.article-list').fadeOut('fast');
+                $('.loading').fadeIn('fast');
+            },
+            complete : function() {
+                $('.article-list').fadeIn('fast');
+                $('.loading').fadeOut('fast');
+            },
+            success : function(data) {
+                $('.article-list').html(data);
+                //console.log(data);
+            }
+        });
+});
+
+function requestAuthorTag(node,taxonomy) {
+    if(node == '#select-author') {
+        var event = 'change';
+    } else {
+        var event = 'click';
+    }
+
+    $(document).on(event,node,function(e) {
+        e.preventDefault();
+
+        if(node == '#select-author') {
+            var tag_value = $(this).val();
+        } else {
+            var tag_value = $(this).text();
+        }
+        
+        //console.log(tag_value);
+
+        $.ajax({
+            data : {
+                action : 'request_article_list_tags',
+                tag_value : tag_value,
+                taxonomy : taxonomy
+            },
+            beforeSend : function() {
+                $('.article-list').fadeOut('fast');
+                $('.loading').fadeIn('fast');
+            },
+            complete : function() {
+                $('.article-list').fadeIn('fast');
+                $('.loading').fadeOut('fast');
+            },
+            success : function(data) {
+                $('.article-list').html(data);
+                //console.log(data);
+            }
+        });
+
     });
 };
-requestPnPost();
 
-function requestArchiveAuthor() {
-    //$('#select-author').change(function() {
-        //var field_value = $(this).val();
+requestAuthorTag('#select-author','autores');
+requestAuthorTag('.article-authors a','autores');
+                
+requestAuthorTag('.tag-li','tags');
+requestAuthorTag('.text-app a','tags');
 
-        //$.ajax({
-            //data : {
-                //action : 'request_article_list',
-                //field_value : field_value
-            //}
-        //});
-    //});
+$(document).on('opened', '[data-reveal]', function () {
+  $('body').css({
+    overflowX : 'hidden'
+  });
+});
+
+$(document).on('closed', '[data-reveal]', function () {
+  $('body').css({
+    overflowX : 'scroll'
+  });
+});
+
+
+function searchQuery() {
+    //search query function
 };
-//requestArchiveAuthor();
-
 
 (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];

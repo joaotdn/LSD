@@ -1,8 +1,4 @@
 <?php get_header(); ?>
-    
-    <div class="menu-options">
-        
-    </div>
 
     <div class="h-timeline">
 

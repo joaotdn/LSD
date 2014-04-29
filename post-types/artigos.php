@@ -109,7 +109,7 @@ function request_article() {
             <article class="left post-content rel">
                 <header class="full-width left article-header">
                         <h3 class="font-lite"><?php echo get_the_title($article_id); ?> </h3>
-                        <span class="authors font-bold full-width left anchor-request">por <?php echo get_the_term_list( $article_id, 'autores', '', ' ,', '' ); ?></span>
+                        <span class="article-authors authors font-bold full-width left anchor-request" data-reveal-id="article-page-modal" data-reveal>por <?php echo get_the_term_list( $article_id, 'autores', '', ' ,', '' ); ?></span>
                         <?php $year = get_field('article_year', $article_id); ?>
                         <time class="font-bold left full-width"><?php echo $year; ?></time>
                         <span class="left full-width font-lite locality">
@@ -122,7 +122,7 @@ function request_article() {
                             endif;
                         ?>
                         </span>
-                        <span class="left full-width font-lite categories text-upp anchor-request"><?php echo get_the_term_list( $article_id, 'tags', '', ' ,', '' ); ?></span>
+                        <span class="left full-width font-lite categories text-upp anchor-request text-app" data-reveal-id="article-page-modal" data-reveal><?php echo get_the_term_list( $article_id, 'tags', '', ' ,', '' ); ?></span>
                        
                         <div class="article-share left full-width">
                             <?php 
