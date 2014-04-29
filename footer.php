@@ -99,7 +99,15 @@
                 e.preventDefault();
             });
 
+
+
+
         });
+
+        $(document).on('click','.ui-autocomplete a',function(e) {
+                e.preventDefault();
+                console.log(e.type);
+            });
     </script>
     <div id="fb-root"></div>
 </body>

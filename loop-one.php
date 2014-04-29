@@ -11,8 +11,8 @@
                 
                 <div class="small-16 small-offset-1 columns this-post">
                     <h5 class="cat-post small-18 left text-upp"><a href="#" data-reveal-id="article-page-modal" data-reveal>Artigos</a></h5>
-                    <p class="title-post text-upp">
-                        <a href="#" title="" class="white get-modal" data-reveal-id="article-modal" data-reveal><?php the_title(); ?></a>
+                    <p class="title-post text-upp lh-one">
+                        <a href="#" title="" class="white get-modal" data-reveal-id="article-modal" data-reveal data-title="<?php the_title(); ?>"><?php the_title(); ?></a>
                     </p>
                 </div>
 
@@ -44,7 +44,9 @@
                             <h6><a href="#" title="Projetos" class="text-upp get-project-timeline" data-taxname="projetos">Projetos</a></h6>
                             <h3><?php echo get_single_term(returnId(), 'projetos_categorias'); ?></h3>
                         </header>
-                        <p class="small-18 left pj-abstract text-upp"><a href="#" class="white get-modal" data-reveal-id="post-modal" data-reveal><?php the_title(); ?></a></p>
+                        <div class="small-18 left pj-abstract"> 
+                            <p class="text-upp lh-one"><a href="#" class="white get-modal" data-reveal-id="post-modal" data-reveal data-title="<?php the_title(); ?>"><?php the_title(); ?></p>
+                        </div> 
                     </figcaption>
                 </figure>
             </article>
@@ -67,9 +69,11 @@
                         <time pubdate><?php the_time('d \d\e M \d\e Y'); ?></time>
                     </span>
                 </header>
-                <p class="small-14 small-offset-2 left thought-abstract text-upp">
-                    <a href="#" title="<?php the_title(); ?>" class="white get-modal" data-reveal-id="thought-modal" data-reveal><?php the_title(); ?></a>
-                </p>
+                <div class="small-14 small-offset-2 left thought-abstract">
+                    <p class="text-upp lh-one">
+                        <a href="#" title="<?php the_title(); ?>" class="white get-modal" data-reveal-id="thought-modal" data-reveal data-title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                    </p>
+                </div>
             </article>
             <?php endwhile; else: endif; wp_reset_query(); ?>
         </div>
