@@ -21,6 +21,7 @@ function request_article_search() {
                         $terms = get_terms( 'autores', array('hide_empty' => false) );
                     ?>
                     <select name="select-author" id="select-author" class="small-18 columns">
+                        <option selected>Escolher autor</option>
                         <?php
                             foreach ($terms as $term):
                         ?>
@@ -61,7 +62,7 @@ function request_article_search() {
     <nav class="article-list abs">
         <ul class="no-bullet full-width left">
             <?php
-                /* 
+                 
                 $args = array( 'post_type' => 'artigos', 'posts_per_page' => 50, 'orderby' => 'date' ); 
                 $loop = new WP_Query( $args );
                 while ( $loop->have_posts() ) : $loop->the_post();
@@ -100,7 +101,7 @@ function request_article_search() {
 
                 </article>
             </li>
-            <?php endwhile; wp_reset_query(); */ ?>
+            <?php endwhile; wp_reset_query();  ?>
         </ul>
     </nav>
     <a class="close-reveal-modal">&#215;</a>

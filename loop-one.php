@@ -61,8 +61,11 @@
                 $category_id = get_cat_ID( 'Pensadouro' );
                 query_posts('showposts=4&category_name=pensadouro'); 
                 if (have_posts()): while (have_posts()) : the_post();
+
+                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(returnId()), 'thumbnail' );
+                $thumb = $thumb['0']; //Return thumbnail URI
             ?>
-            <article class="small-3 left columns this-thought" data-thumb="midias/th1.jpg" data-modalid="<?php echo returnId(); ?>">
+            <article class="small-3 left columns this-thought" data-thumb="<?php echo $thumb; ?>" data-modalid="<?php echo returnId(); ?>">
                 <header class="small-14 small-offset-2 left">
                     <h6><a href="#" title="Pensadouro" class="white text-upp get-category-timeline" data-categoryid="<?php echo $category_id; ?>">Pensadouro</a></h6>
                     <span class="white text-upp font-lite">

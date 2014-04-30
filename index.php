@@ -11,7 +11,7 @@
                 <div class="icon-usa centered"></div>
                 <small class="text-upp small-18 left text-center white">English</small>
             </a>
-            <a href="#" class="bt-option red left">
+            <a href="/wp-admin" target="_blank" class="bt-option red left">
                 <div class="icon-lock centered"></div>
                 <small class="text-upp small-18 left text-center white">Acesso restrito</small>
             </a>
@@ -21,7 +21,9 @@
             </a>
         </div>
 
-        <?php get_template_part('loop','one'); ?>
+        <?php 
+            get_template_part('loop','one'); 
+        ?>
         <?php //get_template_part('loop','two'); ?>
         <?php //get_template_part('loop','three'); ?>
         <?php //get_template_part('loop','four'); ?>
