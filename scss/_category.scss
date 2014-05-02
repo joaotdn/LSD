@@ -7,7 +7,7 @@
 }
 
 .category-timeline {
-	display: none;
+	//display: none;
 	width: rem-calc(2000); height: 100%;
 	@extend %rel;
 	float: left;
@@ -88,7 +88,7 @@
 
 //links
 .post-link {
-	background: $black;
+	//background: $black;
 	a {
 		padding: rem-calc(10);
 		margin-top: rem-calc(10);

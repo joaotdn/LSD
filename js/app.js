@@ -237,7 +237,7 @@ function categoryPostsTL() {
         }
     });
 };
-
+categoryPostsTL();
 
 
 $(document).on('click','a[data-reveal]',function() {

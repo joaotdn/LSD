@@ -55,8 +55,8 @@
                     <li><h4><a href="#" title="" data-reveal-id="article-page-modal" data-reveal>Artigos</a></h4></li>
                     <?php $category_id = get_cat_ID( 'Projetos' ); ?>
                     <li><h4><a href="#" title="" class="get-category-timeline" data-categoryid="<?php echo $category_id; ?>">Projetos</a></h4></li>
-                    <?php $category_id = get_cat_ID( 'Pensadouro' ); ?>
-                    <li><h4><a href="#" title="" class="get-category-timeline" data-categoryid="<?php echo $category_id; ?>">Pensadouro</a></h4></li>
+                    <?php $category_id = get_cat_ID( 'Pensadouro' ); $category_link = get_category_link( $category_id ); ?>
+                    <li><h4><a href="<?php echo esc_url( $category_link ); ?>" title="" class="get-category-timeline" data-categoryid="<?php echo $category_id; ?>">Pensadouro</a></h4></li>
                     <?php $page = get_page_by_title('Contato'); ?>
                     <li><h4><a href="#" title="" data-pageid="<?php echo $page->ID; ?>" data-reveal-id="contact-modal" data-reveal>Contatos</a></h4></li>
                 </ul>
