@@ -160,6 +160,17 @@ $transition-time: .5s;
     }
 }
 
+.reveal-modal {
+	&.visible {
+		display: block;
+		visibility: visible;
+	}
+}
+
+.return-main-page {
+	@extend .close-reveal-modal;
+}
+
 //fonts
 .font-lite {
 	font-family: 'Geometric415BT-LiteA' !important;

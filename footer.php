@@ -62,7 +62,7 @@
             </header>
 
             <form action="" class="search-form">
-                <label for=""><input type="text" id="search-field" name="search-field"></label>
+                <label for=""><input type="text" id="search-field" name="search-field" autofocus></label>
             </form>
 
             <section class="search-result full-width abs">

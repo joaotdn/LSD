@@ -66,7 +66,8 @@ function get_previous_post_id( $post_id ) {
     $post = get_post( $post_id );
 
     // Get the post object for the previous post
-    $previous_post = get_previous_post();
+    $category_id = get_cat_ID( 'Clipping' );
+    $previous_post = get_previous_post(false, $category_id);
 
     // Reset our global object
     $post = $oldGlobal;
@@ -88,7 +89,8 @@ function get_next_post_id( $post_id ) {
     $post = get_post( $post_id );
 
     // Get the post object for the previous post
-    $next_post = get_next_post();
+    $category_id = get_cat_ID( 'Clipping' );
+    $next_post = get_next_post(false, $category_id);
 
     // Reset our global object
     $post = $oldGlobal;
