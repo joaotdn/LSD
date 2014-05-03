@@ -89,6 +89,77 @@ a {
 	color: $pink;
 }
 
+$color: $black;
+$transition-time: .5s;
+
+.lh-one {
+	line-height: 1;
+}
+
+.lh-one {
+	width: 100%;
+	color: white;
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+    vertical-align: top;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    -ms-perspective: 600px;
+    perspective: 600px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+
+    &:hover a {
+      background: $color;
+      -webkit-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+      -moz-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+      -ms-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+      transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+    }
+
+    a {
+
+      display: block;
+      position: relative;
+      padding: rem-calc(10);
+      background: $color;
+      -webkit-transition: all $transition-time ease;
+      -moz-transition: all $transition-time ease;
+      -ms-transition: all $transition-time ease;
+      transition: all $transition-time ease;
+      -webkit-transform-origin: 50% 0%;
+      -moz-transform-origin: 50% 0%;
+      -ms-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      &:after {
+      	width: 100%;
+        content: attr(data-title);
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: rem-calc(10);
+        color: #fff;
+        background: #222;
+        -webkit-transform-origin: 50% 0%;
+        -moz-transform-origin: 50% 0%;
+        -ms-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+        -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+        -ms-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+        transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+      }
+    }
+}
+
 //fonts
 .font-lite {
 	font-family: 'Geometric415BT-LiteA' !important;
@@ -148,7 +219,7 @@ a {
 
 .nav-menu {
 	padding-left: rem-calc(64);
-	margin-top: rem-calc(50);
+	margin-top: rem-calc(30);
 	z-index: 999;
 
 	h4 {
@@ -363,10 +434,18 @@ a {
 		line-height: .8;
 		letter-spacing: .2em;
 	}
+
+	&.clipp {
+		background: white;
+	}
+
+	h2 {
+		font-size: rem-calc(80);
+	}
 }
 
 .icon-lsd {
-	top: rem-calc(524.3);
+	top: rem-calc(518);
 	left: rem-calc(250);
 }
 
@@ -388,6 +467,140 @@ a {
 	}
 }
 
+//Visita virtual
+.virtual-tour {
+	width: rem-calc(934);
+	margin: rem-calc(160) 0 0 rem-calc(320) !important;
+
+	h1 {
+		font-size: rem-calc(85);
+		color: $pink;
+	}
+}
+
+.mark {
+	cursor: pointer;
+}
+
+.wc {
+	top: 0;
+	width: 86px;
+	height: 84px;
+	left: 0;
+}
+
+.triunfo {
+	left: 136px;
+	height: 80px;
+	width: 100px;
+}
+
+.carvalheira {
+	left: 240px;
+	height: 80px;
+	width: 100px;
+}
+
+.ypioca {
+	left: 345px;
+	height: 80px;
+	width: 100px;
+}
+
+.hall {
+	top: 100px;
+	left: 60px;
+	width: 100px;
+	height: 30px;
+}
+
+.recepcao {
+	bottom: 48px;
+	left: 70px;
+	height: 62px;
+	width: 100px;
+}
+
+.sapupara {
+	bottom: 48px;
+	left: 175px;
+	height: 80px;
+	width: 100px;
+}
+
+.serra-limpa {
+	bottom: 48px;
+	left: 280px;
+	width: 77px;
+	height: 80px;
+}
+
+.eng-meio {
+	bottom: 48px;
+	left: 359px;
+	width: 80px;
+	height: 80px;
+}
+
+.serra-preta {
+	right: 379px;
+	width: 68px;
+	height: 70px;
+}
+
+.carucu {
+	right: 238px;
+	width: 90px;
+	height: 80px;
+}
+
+.volupia {
+	right: 173px;
+	width: 62px;
+	height: 84px;
+}
+
+.rainha {
+	right: 109px;
+	width: 60px;
+	height: 84px;
+}
+
+.dona-bica {
+	right: 5px;
+	height: 84px;
+	width: 100px;
+}
+
+.auditorio {
+	bottom: 49px;
+	right: 124px;
+	width: 150px;
+	height: 80px;
+}
+
+.bruxaxa {
+	bottom: 49px;
+	right: 0;
+	width: 118px;
+	height: 80px;
+}
+
+
+//Clipping
+.list-clipping {
+	padding: 0 rem-calc(20);
+
+	h4 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-bottom: rem-calc(10);
+	}
+	img {
+		min-width: 100%;
+	}
+}
 
 
 

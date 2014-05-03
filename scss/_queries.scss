@@ -19,6 +19,7 @@
 		width: 50%;
 		float: right;
 	}
+
 }
 
 @media screen and (min-width: rem-calc(320)) and (max-width: rem-calc(1200)) {
@@ -46,5 +47,13 @@
 
 	.english-body {
 		margin-left: rem-calc(600);
+	}
+
+	.oportunity-text {
+		left: rem-calc(600);
+	}
+
+	.opt-header h2 {
+		font-size: rem-calc(50);
 	}
 }

@@ -237,7 +237,7 @@ function categoryPostsTL() {
         }
     });
 };
-
+categoryPostsTL();
 
 
 $(document).on('click','a[data-reveal]',function() {
@@ -286,6 +286,21 @@ $(document).on('click','a[data-reveal]',function() {
             var action = 'request_team_for_ever',
                 idt    = '#teamever-modal';
             break;
+
+            case 'tour-modal' :
+            var action = 'request_tour',
+                idt    = '#tour-modal';
+            break;
+
+            case 'clipping-modal' :
+            var action = 'request_clipping',
+                idt    = '#clipping-modal';
+            break;
+
+            case 'english-page-modal' :
+            var action = 'request_english',
+                idt    = '#english-page-modal';
+            break;
         }
 
         $.ajax({
@@ -308,11 +323,11 @@ $(document).on('click','a[data-reveal]',function() {
                 scrollBarConfig();
                 requestPostContent();
                 
-                requestAuthorTag('#select-author','autores');
-                requestAuthorTag('.article-authors a','autores');
+                //requestAuthorTag('#select-author','autores');
+                //requestAuthorTag('.article-authors a','autores');
                 
-                requestAuthorTag('.tag-li','tags');
-                requestAuthorTag('.text-app a','tags');     
+                //requestAuthorTag('.tag-li','tags');
+                //requestAuthorTag('.text-app a','tags');     
             },
             error : function(e) {
                 alert('Erro ' + e.status + '\nTente novamente.');
@@ -386,7 +401,7 @@ function requestAuthorTag(node,taxonomy) {
         var event = 'click';
     }
 
-    $(node).bind(event, function(e) {
+    $(document).on(event,node,function(e) {
         e.preventDefault();
 
         if(node == '#select-author') {
@@ -419,6 +434,25 @@ function requestAuthorTag(node,taxonomy) {
 
     });
 };
+
+requestAuthorTag('#select-author','autores');
+requestAuthorTag('.article-authors a','autores');
+                
+requestAuthorTag('.tag-li','tags');
+requestAuthorTag('.text-app a','tags');
+
+$(document).on('opened', '[data-reveal]', function () {
+  $('body').css({
+    overflowX : 'hidden'
+  });
+});
+
+$(document).on('closed', '[data-reveal]', function () {
+  $('body').css({
+    overflowX : 'scroll'
+  });
+});
+
 
 function searchQuery() {
     //search query function

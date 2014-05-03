@@ -14,6 +14,7 @@ function request_oportunity() {
                 <h1 class="text-italic text-upp">opor</h1>
                 <h1 class="text-italic text-upp">tuni</h1>
                 <h1 class="text-italic text-upp">dades</h1>
+                <h6 class="text-upp font-bold">enviar e-mail para info@lsd.ufcg.edu.br <br>com currículo vitae em anexo.</h6>
             </hgroup>
 
             <div class="icon-lsd abs"></div>
