@@ -1,11 +1,11 @@
 <nav class="category-timeline">
     <section class="category-posts">
         <?php       
-            query_posts('showposts=10&category_name=pensadouro'); 
+            query_posts('showposts=10&category_name=pensadouro&offset=20'); 
             if (have_posts()): while (have_posts()) : the_post();
             global $post;
         ?>
-        <article data-thumb="midias/post-th.jpg">
+        <article data-thumb="<?php echo $thumb; ?>" data-modalid="<?php echo returnId(); ?>">
             <section class="post-info small-14 columns small-offset-2">
                 <header>
                     <h5 class="text-upp">

@@ -12,7 +12,7 @@ $.ajaxSetup({
 });
 
 function scrollBarConfig() {
-$('.post-text, .article-text, .article-list, .thought-post, .group-list, .search-result, .english-text, .friends-list, .oportunity-text').perfectScrollbar({
+$('.post-text, .atc-ct, .contact-content, .article-list, .thought-post, .group-list, .search-result, .english-text, .friends-list, .oportunity-text').perfectScrollbar({
     wheelSpeed: 20,
     wheelPropagation: false,
     suppressScrollX: true
@@ -33,6 +33,7 @@ function adjustRowsTimeline(timeline) {
 };
 
 adjustRowsTimeline('.post-articles');
+adjustRowsTimeline('.projects-posts');
 
 $(window).bind('load resize' ,function(e) {
 	var max_height;
@@ -51,8 +52,8 @@ $(window).bind('load resize' ,function(e) {
 
     otherHeight('.h-timeline',0);
     otherHeight('.post-text',260);
-    otherHeight('.article-text',350);
-    otherHeight('.article-list',300);
+    //otherHeight('.article-text',350);
+    //otherHeight('.article-list',300);
     otherHeight('.english-text',260);
     otherHeight('.list-team',150);
     otherHeight('.group-list',320);
@@ -122,6 +123,30 @@ function projectsTitles() {
 };
 
 projectsTitles();
+
+
+function projectsArchive() {
+    var count = $('article','.projects-posts').length;
+
+    $.each($('article','.projects-posts'),function(i) {
+        switch(i % 3) {
+            case 0:
+                $(this).addClass('column-one')
+                .append('<div class="small-9 abs bg-yellow"></div><div class="small-9 abs bg-violet-lite"></div>');
+            break;
+            case 1: 
+                $(this).addClass('column-two small-offset-2')
+                .append('<div class="small-9 abs bg-blue-lite"></div><div class="small-18 abs bg-violet"></div>');
+            break;
+            case 2: 
+                $(this).addClass('column-three')
+                .append('<div class="small-18 abs bg-blue"></div><div class="small-9 abs bg-red"></div>');
+            break;
+        }
+    });
+};
+
+projectsArchive();
 
 /**
  * Get category page with ajax
@@ -445,6 +470,8 @@ $(document).on('opened', '[data-reveal]', function () {
   $('body').css({
     overflowX : 'hidden'
   });
+
+  $('#search-field').focus();
 });
 
 $(document).on('closed', '[data-reveal]', function () {
@@ -584,7 +611,13 @@ function requestPostContent() {
 		});
 	});
 };
-requestPostContent(); 
+requestPostContent();
+
+$('.search-form').on('submit',function(e) {
+    e.preventDefault();
+
+    return false;
+}); 
 
 
 // Foundation JavaScript

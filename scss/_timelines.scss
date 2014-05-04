@@ -246,3 +246,68 @@
 	background: $violet;
 	right: 100%
 }
+
+/**
+ * Projetos
+ */
+.projects-posts {
+	width: rem-calc(2000);
+	height: 100%;
+
+	article {
+		&.column-one {
+			top: 35%;
+		}
+		&.column-three {
+			top: 50%;
+		}
+	}
+
+	.bg-blue-lite {
+		height: 100%;
+		background: $blue-lite;
+		right: 100%;
+	}
+
+	.bg-violet {
+		height: 40%;
+		background: $violet;
+		top: 100%;
+	}
+
+	.bg-yellow {
+		height: 70%;
+		background: $yellow;
+		top: 60%;
+		left: 100%;
+	}
+
+	.bg-violet-lite {
+		height: 90%;
+		background: $violet-lite;
+		bottom: 100%;
+		right: 100%;
+	}
+	.bg-blue {
+		height: 40%;
+		background: $blue;
+		bottom: 100%;
+	}
+	.bg-red {
+		height: 100%;
+		background: $pink;
+		left: 100%;
+	}
+}
+.th-pj-timeline {
+	height: 50%;
+
+	figure {
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position:  center;
+	}
+
+
+}

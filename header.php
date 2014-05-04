@@ -38,8 +38,7 @@
                     <li>
                         <h4><a href="#" title="">Lab</a></h4>
                         <ul class="no-bullet sub-menu">
-                            <?php $page = get_page_by_title('Clipping'); ?>
-                            <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>" data-reveal-id="clipping-modal" data-reveal>Clipping</a></li>
+                            <li><a href="#" title="" data-reveal-id="clipping-modal" data-reveal>Clipping</a></li>
                             <?php $page = get_page_by_title('Equipe'); ?>
                             <li><a href="#" title="" data-pageid="<?php echo $page->ID; ?>" data-reveal-id="team-modal" data-reveal>Equipe</a></li>
                             <?php $page = get_page_by_title('LSD4ever'); ?>
@@ -53,10 +52,13 @@
                         </ul>
                     </li>
                     <li><h4><a href="#" title="" data-reveal-id="article-page-modal" data-reveal>Artigos</a></h4></li>
-                    <?php $category_id = get_cat_ID( 'Projetos' ); ?>
-                    <li><h4><a href="#" title="" class="get-category-timeline" data-categoryid="<?php echo $category_id; ?>">Projetos</a></h4></li>
+
+                    <?php $projetos_url = get_post_type_archive_link('projetos'); ?>
+                    <li><h4><a href="<?php echo $projetos_url; ?>" title="" class="get-category-timeline" data-categoryid="<?php echo $category_id; ?>">Projetos</a></h4></li>
+                    
                     <?php $category_id = get_cat_ID( 'Pensadouro' ); $category_link = get_category_link( $category_id ); ?>
                     <li><h4><a href="<?php echo esc_url( $category_link ); ?>" title="" class="get-category-timeline" data-categoryid="<?php echo $category_id; ?>">Pensadouro</a></h4></li>
+                    
                     <?php $page = get_page_by_title('Contato'); ?>
                     <li><h4><a href="#" title="" data-pageid="<?php echo $page->ID; ?>" data-reveal-id="contact-modal" data-reveal>Contatos</a></h4></li>
                 </ul>

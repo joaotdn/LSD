@@ -1,6 +1,6 @@
-@media screen and (max-height: rem-calc(680)) {
+@media screen and (max-height: rem-calc(728)) {
 	.sub-menu {
-		display: none;
+		//display: none;
 	}
 	.post-info {
 		margin-top: rem-calc(10);
@@ -20,9 +20,15 @@
 		float: right;
 	}
 
+	#main-menu {
+		h4 {
+			font-size: rem-calc(14);
+		}
+	}
+
 }
 
-@media screen and (min-width: rem-calc(320)) and (max-width: rem-calc(1200)) {
+@media screen and (min-width: rem-calc(320)) and (max-width: rem-calc(1280)) {
 	.post-thumb {
 		width: rem-calc(600) !important;
 	}
@@ -53,7 +59,58 @@
 		left: rem-calc(600);
 	}
 
-	.opt-header h2 {
-		font-size: rem-calc(50);
+	.opt-header {
+		h1,h2 {
+			font-size: rem-calc(50);
+		}
+		h6 {
+			font-size: rem-calc(10);
+		}
+		
 	}
+
+	.icon-lsd {
+		left: rem-calc(80);
+	}
+
+	.select-options {
+		width: rem-calc(300);
+		header {
+			h1 {
+				font-size: rem-calc(50);
+			}
+		}
+	}
+
+	.article-list {
+		left: rem-calc(600);
+	}
+
+	.contact-content {
+		width: rem-calc(400) !important;
+	}
+
+	.thought-header {
+		left: rem-calc(300);
+		width: rem-calc(300);
+	}
+
+	.thought-nav {
+		width: rem-calc(300);
+		span {
+			display: none;
+		}
+	}
+
+	.the-thought {
+		width: rem-calc(300);
+		h1 {
+			font-size: rem-calc(50);
+		}
+	}
+
+	.thought-post {
+		left: rem-calc(600);
+	}
+
 }

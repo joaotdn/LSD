@@ -30,16 +30,19 @@ function request_article_search() {
                     </select>
 
                     <h3 class="text-upp white font-bold full-width left">Por ano</h3>
-                    <?php
-                        //$terms = get_terms( 'article_year', array('hide_empty' => false) );
-                        $years = get_meta_values( 'article_year', 'artigos' );
-                    ?>
+                    
                     <select name="select-author" id="select-year" class="small-18 columns">
+                        <option selected="selected">Escolher ano</option>
                         <?php
-                            foreach ($years as $year):
+                            $ano = date('Y',time());
+                            $past = 2000;
+                            while($past <= $ano):
                         ?>
-                            <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
-                        <?php endforeach; ?>
+                            <option value="<?php echo $past; ?>"><?php echo $past; ?></option>
+                        <?php 
+                            $past++;
+                            endwhile; 
+                        ?>
                     </select>
 
                     <h3 class="text-upp white font-bold full-width left">Por tag</h3>

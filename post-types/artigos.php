@@ -106,7 +106,7 @@ function request_article() {
                 </header>
             </div>
 
-            <article class="left post-content rel">
+            <article class="left post-content atc-ct">
                 <header class="full-width left article-header">
                         <h3 class="font-lite"><?php echo get_the_title($article_id); ?> </h3>
                         <span class="article-authors authors font-bold full-width left anchor-request" data-reveal-id="article-page-modal" data-reveal>por <?php echo get_the_term_list( $article_id, 'autores', '', ' ,', '' ); ?></span>
@@ -134,7 +134,7 @@ function request_article() {
                         </div>
                 </header>
 
-                <div class="article-text full-width abs">
+                <div class="article-text full-width">
                     <?php echo returnContent($article_id); ?>
                 </div>
             </article>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php if(in_category('pensadouro')): ?>
 <div id="thought-modal" class="reveal-modal visible" data-reveal>
 	<?php
 		$p_postid = get_previous_post_id( returnId() );
@@ -59,5 +59,42 @@
 
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="return-main-page">&#215;</a>
 </div>
+<?php elseif(in_category('clipping')): ?>
+
+<div id="clipping-modal" class="reveal-modal visible" data-reveal>
+    <div class="row">
+        <div class="abs post-thumb" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/clipping-bg.jpg);">
+            <hgroup class="opt-header clipp">
+                <h2 class="text-italic">[clipping]</h2>
+            </hgroup>
+        </div>
+        
+        <article class="oportunity-text abs">
+            <nav class="list-clipping small-18 columns clearing-thumbs" data-clearing>
+                <?php       
+                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(returnId()), 'medium' );
+                    $thumb = $thumb['0']; //Return thumbnail URI
+
+                    $img = wp_get_attachment_image_src( get_post_thumbnail_id(returnId()), 'full' );
+                    $img = $img['0'];
+                ?>
+                <figure class="small-18 left">
+                    <figcaption class="small-18 left">
+                        <h4 class="font-lite black">Wired</h4>
+                        <p class="text-upp"><time pubdate><?php the_time('d \d\e F \d\e Y'); ?></time></p>
+                    </figcaption>
+                    
+                    <a href="<?php echo $img; ?>" class="display-block small-18 left" title="<?php the_title(); ?>">
+                        <img src="<?php echo $thumb; ?>" alt="" data-caption="<?php the_title(); ?>">
+                    </a>
+                </figure>
+                
+            </nav>
+        </article>
+    </div>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="return-main-page">&#215;</a>
+</div>
+
+<?php endif; ?>
 
 <?php get_footer(); ?>
