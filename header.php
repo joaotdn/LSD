@@ -36,7 +36,7 @@
             <nav class="nav-menu small-16 left rel">
                 <ul class="no-bullet">
                     <li>
-                        <h4><a href="#" title="">Lab</a></h4>
+                        <h4 class="white text-upp font-bold">Lab</h4>
                         <ul class="no-bullet sub-menu">
                             <li><a href="#" title="" data-reveal-id="clipping-modal" data-reveal>Clipping</a></li>
                             <?php $page = get_page_by_title('Equipe'); ?>

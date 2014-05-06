@@ -617,6 +617,10 @@ $('.search-form').on('submit',function(e) {
     e.preventDefault();
 
     return false;
+});
+
+$('a[data-reveal-id="contact-modal"]').on('click', function() {
+    $('.contact-map').append('<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3958.2250665842153!2d-35.907427999999996!3d-7.215147999999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aea086d4a53101%3A0xf4804c28cbee4489!2sUniversidade+Federal+de+Campina+Grande+-+Ufcg!5e0!3m2!1spt-BR!2sbr!4v1398636098077" width="100%" height="100%" frameborder="0" style="border:0"></iframe>');
 }); 
 
 

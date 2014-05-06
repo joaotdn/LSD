@@ -21,7 +21,7 @@ function request_article_search() {
                         $terms = get_terms( 'autores', array('hide_empty' => false) );
                     ?>
                     <select name="select-author" id="select-author" class="small-18 columns">
-                        <option selected>Escolher autor</option>
+                        <option value="Todos" selected>Todos</option>
                         <?php
                             foreach ($terms as $term):
                         ?>
@@ -32,7 +32,7 @@ function request_article_search() {
                     <h3 class="text-upp white font-bold full-width left">Por ano</h3>
                     
                     <select name="select-author" id="select-year" class="small-18 columns">
-                        <option selected="selected">Escolher ano</option>
+                        <option value="Todos" selected="selected">Todos</option>
                         <?php
                             $ano = date('Y',time());
                             $past = 2000;
@@ -123,6 +123,7 @@ function request_article_list_query() {
     $field_value = $_GET['field_value'];
     $key = $_GET['key'];
 
+    if($field_value !== 'Todos'):
     ?>
     <ul class="no-bullet full-width left">
         <?php
@@ -173,6 +174,54 @@ function request_article_list_query() {
         <?php endwhile; wp_reset_query(); ?>
     </ul>
     <?php
+
+    else:
+        ?>
+        <ul class="no-bullet full-width left">
+            <?php
+                 
+                $args = array( 'post_type' => 'artigos', 'posts_per_page' => 50, 'orderby' => 'date' ); 
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post();
+
+                global $post;
+            ?>
+            <li>
+                <article data-modalid="<?php echo returnId(); ?>">
+
+                <span class="full-width left text-upp red font-12 font-bold">
+                    <?php $year = get_field('article_year'); ?>
+                    <time><?php echo $year; ?></time>
+                    <?php 
+                        $pdf = get_field('article_pdf'); 
+                        if($pdf):
+                    ?>
+                    <a href="<?php echo $pdf; ?>" title="Baixar PDF" class="article-pdf black" style="margin-left:10px;">Download PDF</a>
+                    <?php endif; ?> 
+                </span>
+                <h4 class="full-width left font-lite">
+                    <a href="#" title="<?php the_title(); ?>" class="black" data-reveal-id="article-modal" data-reveal><?php the_title(); ?></a>
+                </h4>
+                
+                <p class="article-authors font-bold">por <?php echo get_the_term_list( $post->ID, 'autores', '<span class="author-slug" value="">', ' ,', '</span>' ); ?></p>
+                <p class="locality text-italic">
+                    <?php 
+                        $fields = get_field('articles_fonts');
+                        if($fields):
+                            foreach($fields as $field): 
+                            echo $field['article_font_desc'] . ', ';
+                            endforeach;
+                        endif;
+                    ?>
+                </p>
+                <p class="categories text-app"><?php echo get_the_term_list( $post->ID, 'tags', '', ' ,', '' ); ?></p>
+
+                </article>
+            </li>
+            <?php endwhile; wp_reset_query();  ?>
+        </ul>
+        <?php
+        endif;
     exit();
 }
 
@@ -186,6 +235,7 @@ function request_article_list_tags() {
     $tag_value = $_GET['tag_value'];
     $taxonomy = $_GET['taxonomy'];
 
+    if($tag_value !== 'Todos'):
     ?>
     <ul class="no-bullet full-width left">
         <?php
@@ -235,6 +285,54 @@ function request_article_list_tags() {
         <?php endwhile; wp_reset_query(); ?>
     </ul>
     <?php
+    else:
+    ?>
+        <ul class="no-bullet full-width left">
+            <?php
+                 
+                $args = array( 'post_type' => 'artigos', 'posts_per_page' => 50, 'orderby' => 'date' ); 
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post();
+
+                global $post;
+            ?>
+            <li>
+                <article data-modalid="<?php echo returnId(); ?>">
+
+                <span class="full-width left text-upp red font-12 font-bold">
+                    <?php $year = get_field('article_year'); ?>
+                    <time><?php echo $year; ?></time>
+                    <?php 
+                        $pdf = get_field('article_pdf'); 
+                        if($pdf):
+                    ?>
+                    <a href="<?php echo $pdf; ?>" title="Baixar PDF" class="article-pdf black" style="margin-left:10px;">Download PDF</a>
+                    <?php endif; ?> 
+                </span>
+                <h4 class="full-width left font-lite">
+                    <a href="#" title="<?php the_title(); ?>" class="black" data-reveal-id="article-modal" data-reveal><?php the_title(); ?></a>
+                </h4>
+                
+                <p class="article-authors font-bold">por <?php echo get_the_term_list( $post->ID, 'autores', '<span class="author-slug" value="">', ' ,', '</span>' ); ?></p>
+                <p class="locality text-italic">
+                    <?php 
+                        $fields = get_field('articles_fonts');
+                        if($fields):
+                            foreach($fields as $field): 
+                            echo $field['article_font_desc'] . ', ';
+                            endforeach;
+                        endif;
+                    ?>
+                </p>
+                <p class="categories text-app"><?php echo get_the_term_list( $post->ID, 'tags', '', ' ,', '' ); ?></p>
+
+                </article>
+            </li>
+            <?php endwhile; wp_reset_query();  ?>
+        </ul>
+
+    <?php
+    endif;
     exit();
 }
 ?>
