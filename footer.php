@@ -95,13 +95,9 @@
         $(document).ready(function() {
 
             $('html, body, *').mousewheel(function(e, delta) {
-                this.scrollLeft -= (delta * 30);
+                this.scrollLeft -= (delta);
                 e.preventDefault();
             });
-
-
-
-
         });
 
         $(document).on('click','.ui-autocomplete a',function(e) {

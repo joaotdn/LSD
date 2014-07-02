@@ -56,7 +56,7 @@ function request_thought() {
                     </div>
                 </header>
 
-                <div class="thought-text abs">
+                <div class="thought-text font-share abs">
                     <?php echo returnContent($article_id); ?>
                 </div>
             </section>
@@ -125,7 +125,7 @@ function request_pnpost() {
                     </div>
                 </header>
 
-                <div class="thought-text abs">
+                <div class="thought-text font-regular abs">
                     <?php echo returnContent($article_id); ?>
                 </div>
             </section>

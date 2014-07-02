@@ -65,6 +65,8 @@
 
 .blog-header {
 	margin-top: rem-calc(30);
+	padding-left: rem-calc(10);
+	padding-right: rem-calc(10);
 
 	time {
 		color: $blue;
@@ -80,10 +82,17 @@
 
 .thought-text {
 	width: rem-calc(600);
-	height: rem-calc(290);
-	top: rem-calc(555);
+	height: 100%;
+	top: rem-calc(600);
+	padding-right: rem-calc(10);
+	padding-left: rem-calc(10);
 
 	li {
 		margin: 0;
+	}
+
+	p {
+		font-size: rem-calc(14);
+		font-family: 'Share-Regular' !important;
 	}
 }
